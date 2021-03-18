@@ -8,22 +8,23 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="97dp"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
-        android:layout_marginTop="20dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Welcome!" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:text="sign in"/>
-    
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:text="sign up"/>
+        android:layout_marginTop="220dp"
+        android:text="sign up" />
 
 
 </RelativeLayout>
