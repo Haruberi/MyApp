@@ -11,23 +11,24 @@
 
     <TextView
         android:id="@+id/welcomeLogo"
-        android:layout_width="210dp"
-        android:layout_height="57dp"
+        android:layout_width="172dp"
+        android:layout_height="63dp"
         android:text="Welcome!"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintVertical_bias="0.16000003" />
 
     <Button
         android:id="@+id/signInButton"
-        android:layout_width="169dp"
-        android:layout_height="63dp"
+        android:layout_width="190dp"
+        android:layout_height="73dp"
+        android:background="@drawable/btn_bg"
         android:text="sign in"
         android:textColor="@android:color/white"
         android:textSize="24sp"
@@ -37,8 +38,9 @@
 
     <Button
         android:id="@+id/signUpButton"
-        android:layout_width="169dp"
-        android:layout_height="63dp"
+        android:layout_width="190dp"
+        android:layout_height="73dp"
+        android:background="@drawable/btn_bg"
         android:text="sing up"
         android:textColor="@android:color/white"
         android:textSize="24sp"
