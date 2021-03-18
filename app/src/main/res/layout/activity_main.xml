@@ -26,10 +26,10 @@
 
     <Button
         android:id="@+id/signInButton"
-        android:layout_width="190dp"
-        android:layout_height="73dp"
+        android:layout_width="225dp"
+        android:layout_height="77dp"
         android:background="@drawable/btn_bg"
-        android:text="sign in"
+        android:text="sign in here"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,15 +38,23 @@
 
     <Button
         android:id="@+id/signUpButton"
-        android:layout_width="190dp"
-        android:layout_height="73dp"
+        android:layout_width="225dp"
+        android:layout_height="77dp"
         android:background="@drawable/btn_bg"
-        android:text="sing up"
+        android:text="sing up here"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/signInButton"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/signInButton"
         tools:layout_editor_absoluteY="467dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="143dp"
+        android:layout_height="137dp"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="190dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
