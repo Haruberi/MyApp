@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignInActivity"
-    android:background="@color/background_purple">
+    android:background="@color/background_purple"
+    tools:context=".SignInActivity">
 
     <TextView
         android:id="@+id/SignInLogo"
@@ -19,12 +19,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16000003" />
+        app:layout_constraintVertical_bias="0.218" />
 
-    <TextView
+    <EditText
         android:id="@+id/editTextSigninUser"
         android:layout_width="203dp"
         android:layout_height="49dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_account"
         android:drawablePadding="10dp"
@@ -39,13 +40,15 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="204dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignInLogo" />
 
-    <TextView
+    <EditText
         android:id="@+id/editTextSigninPassword"
         android:layout_width="203dp"
         android:layout_height="49dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
@@ -58,31 +61,34 @@
         android:textSize="18sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/editTextSigninUser"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextSigninUser"
-        tools:layout_editor_absoluteY="269dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSigninUser" />
 
     <Button
         android:id="@+id/button_signin"
         android:layout_width="190dp"
         android:layout_height="73dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/btn_bg"
         android:text="sign in"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextSigninPassword"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="@+id/editTextSigninPassword"
-        tools:layout_editor_absoluteY="353dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
         android:text="Forgot password?"
-        android:textColor="@color/design_default_color_primary_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.651"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_signin" />
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSigninPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
