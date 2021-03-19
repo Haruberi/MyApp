@@ -48,7 +48,7 @@
         android:id="@+id/editTextSigninPassword"
         android:layout_width="203dp"
         android:layout_height="49dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
@@ -87,7 +87,7 @@
         android:layout_marginEnd="12dp"
         android:text="Forgot password?"
         android:textColor="@color/white"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="@+id/editTextSigninPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword" />
