@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//Navigate to SignInActivity
         Button signinBtn=findViewById(R.id.signInButton);
         signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -21,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,SignInActivity.class));
             }
         });
-        Button signoutBtn=findViewById(R.id.signUpButton);
-        signoutBtn.setOnClickListener(new View.OnClickListener() {
+        //Navigate to SignUpActivity
+        Button signupBtn=findViewById(R.id.signUpButton);
+        signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,SignUpActivity.class));
