@@ -24,14 +24,5 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        //Navigate to StartTabbedActivity
-        Button signupStart=findViewById(R.id.button_signup);
-        signupStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SignUpActivity.this, StartTabbedActivity.class));
-            }
-        });
-
     }
 }

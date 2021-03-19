@@ -38,7 +38,7 @@
         android:layout_width="118dp"
         android:layout_height="112dp"
         android:background="@drawable/roundbtn_bg"
-        android:text="Button"
+        android:text="Korean"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/japaneseBtn"
         app:layout_constraintHorizontal_bias="0.0"

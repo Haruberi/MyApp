@@ -11,9 +11,11 @@
 
     <TextView
         android:id="@+id/welcomeLogo"
-        android:layout_width="172dp"
-        android:layout_height="63dp"
+        android:layout_width="385dp"
+        android:layout_height="82dp"
+        android:fontFamily="@font/diplomata"
         android:text="Welcome!"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:textStyle="bold"
