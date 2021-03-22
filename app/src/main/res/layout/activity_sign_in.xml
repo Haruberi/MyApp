@@ -54,6 +54,7 @@
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
         android:hint="Password"
+        android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -75,10 +76,12 @@
         android:text="sign in"
         android:textColor="@color/white"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextSigninPassword"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/editTextSigninPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/forgotPassword"
@@ -91,6 +94,8 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/editTextSigninPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
