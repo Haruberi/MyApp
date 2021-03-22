@@ -19,4 +19,9 @@ public class SignInActivity extends AppCompatActivity {
         username=(EditText)findViewById(R.id.editTextSigninUser);
         password=(EditText)findViewById(R.id.editTextSigninPassword);
     }
+    //Button check for sign in
+    public void button_signin(View v){
+
+    }
+
 }
