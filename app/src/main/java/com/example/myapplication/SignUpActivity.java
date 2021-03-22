@@ -39,16 +39,20 @@ public class SignUpActivity extends AppCompatActivity {
     }
     //Logic to call insertData of LanguageDB class
     public void signUp(View v){
-        String name=name1.getText().toString().trim();
-        String email=email1.getText().toString().trim();
-        String username=username1.getText().toString().trim();
-        String password=password1.getText().toString().trim();
+        String name=name1.getText().toString();
+        String email=email1.getText().toString();
+        String username=username1.getText().toString();
+        String password=password1.getText().toString();
         boolean result=SignUpActivity.languageDB.insertData(name, email, username, password);
 
-        if(result){
-            Toast.makeText(SignUpActivity.this,username+" member registered!",Toast.LENGTH_LONG).show();
-            Intent i=new Intent(SignUpActivity.this,HomeActivity.class);
+        if (result) {
+            Toast.makeText(SignUpActivity.this,"Welcome " + username + ", you are now registered!",Toast.LENGTH_LONG).show();
             //finish
+            name1.setText("");
+            email1.setText("");
+            username1.setText("");
+            password1.setText("");
+            startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
         }
         else {
             AlertDialog.Builder ad=new AlertDialog.Builder(this);
