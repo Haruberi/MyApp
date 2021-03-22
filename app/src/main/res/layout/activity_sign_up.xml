@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
-    android:background="@color/background_purple">
+    android:background="@color/background_purple"
+    tools:context=".SignUpActivity">
 
     <TextView
         android:id="@+id/SignUplogo"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.19999999" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/signUpPageName"
         android:layout_width="249dp"
         android:layout_height="49dp"
         android:layout_marginTop="40dp"
@@ -41,12 +41,14 @@
         android:paddingBottom="10dp"
         android:textColor="@android:color/white"
         android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignUplogo" />
+        app:layout_constraintTop_toBottomOf="@+id/SignUplogo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/signUpPageEmail"
         android:layout_width="249dp"
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
@@ -55,19 +57,19 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColor="@android:color/white"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/editTextName"
-        app:layout_constraintStart_toStartOf="@+id/editTextName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintEnd_toEndOf="@+id/signUpPageName"
+        app:layout_constraintStart_toStartOf="@+id/signUpPageName"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPageName" />
 
     <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/signUpPageUser"
         android:layout_width="249dp"
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
@@ -76,41 +78,43 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Username"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColor="@android:color/white"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/signUpPageEmail"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+        app:layout_constraintStart_toStartOf="@+id/signUpPageEmail"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPageEmail" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/signUpPagePass"
         android:layout_width="249dp"
         android:layout_height="49dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:textColor="@android:color/white"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/editTextUsername"
-        app:layout_constraintStart_toStartOf="@+id/editTextUsername"
-        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
+        app:layout_constraintEnd_toEndOf="@+id/signUpPageUser"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/signUpPageUser"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPageUser" />
 
     <Button
-        android:id="@+id/button_signup"
+        android:id="@+id/signUpPageButton"
+        android:onClick="signUp"
         android:layout_width="190dp"
         android:layout_height="73dp"
         android:layout_marginTop="24dp"
@@ -118,9 +122,12 @@
         android:text="sign up"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/signUpPagePass"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/signUpPagePass"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPagePass"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/alreadyRegistered"
@@ -132,8 +139,10 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpPageButton"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

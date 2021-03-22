@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.21" />
 
     <EditText
-        android:id="@+id/editTextSigninUser"
+        android:id="@+id/signInPageUser"
         android:layout_width="249dp"
         android:layout_height="49dp"
         android:layout_marginTop="32dp"
@@ -33,7 +33,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Username"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/SignInLogo" />
 
     <EditText
-        android:id="@+id/editTextSigninPassword"
+        android:id="@+id/signInPagePass"
         android:layout_width="249dp"
         android:layout_height="49dp"
         android:layout_marginTop="12dp"
@@ -62,13 +62,14 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/editTextSigninUser"
+        app:layout_constraintEnd_toEndOf="@+id/signInPageUser"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextSigninUser"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSigninUser" />
+        app:layout_constraintStart_toStartOf="@+id/signInPageUser"
+        app:layout_constraintTop_toBottomOf="@+id/signInPageUser" />
 
     <Button
-        android:id="@+id/button_signin"
+        android:id="@+id/signInPageButton"
+        android:onClick="signIn"
         android:layout_width="190dp"
         android:layout_height="73dp"
         android:layout_marginTop="60dp"
@@ -77,10 +78,10 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextSigninPassword"
+        app:layout_constraintEnd_toEndOf="@+id/signInPagePass"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@+id/editTextSigninPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword"
+        app:layout_constraintStart_toStartOf="@+id/signInPagePass"
+        app:layout_constraintTop_toBottomOf="@+id/signInPagePass"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -97,5 +98,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.689"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSigninPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/signInPagePass" />
 </androidx.constraintlayout.widget.ConstraintLayout>
