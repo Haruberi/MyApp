@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".JapLev1Activity"></activity>
+        <activity android:name=".JapaneseActivity" />
         <activity
             android:name=".StartTabbedActivity"
             android:label="@string/title_activity_start_tabbed"
-            android:theme="@style/Theme.MyApplication.NoActionBar"></activity>
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SignInActivity" />
         <activity
