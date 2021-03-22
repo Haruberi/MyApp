@@ -13,10 +13,10 @@
         android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172"
+        app:layout_constraintVertical_bias="0.179"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
@@ -25,10 +25,10 @@
         android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.73"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137"
+        app:layout_constraintVertical_bias="0.138"
         app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24" />
 
     <TextView
@@ -44,6 +44,23 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintVertical_bias="0.053" />
+
+    <TextView
+        android:id="@+id/nameUserText"
+        android:layout_width="253dp"
+        android:layout_height="46dp"
+        android:fontFamily="casual"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/welcome_logo"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/welcome_logo"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_logo"
+        app:layout_constraintVertical_bias="0.06" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
