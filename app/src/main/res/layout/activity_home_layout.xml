@@ -67,23 +67,28 @@
         android:id="@+id/tabBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/background_purple"
+        android:scrollbarSize="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monday" />
+            android:id="@+id/learnTab"
+            android:text="learn" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tuesday" />
+            android:id="@+id/homeTab"
+            android:text="home" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wednesday" />
+            android:id="@+id/signoutTab"
+            android:text="sign out" />
     </com.google.android.material.tabs.TabLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
