@@ -13,18 +13,17 @@ import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    EditText name1, email1, username1, password1;
+    EditText signUpName, signUpEmail, signUpUser, signUpPass;
     static LanguageDB languageDB;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        name1 = (EditText) findViewById(R.id.signUpPageName);
-        email1 = (EditText) findViewById(R.id.signUpPageEmail);
-        username1 = (EditText) findViewById(R.id.signUpPageUser);
-        password1 = (EditText) findViewById(R.id.signUpPagePass);
+        signUpName = (EditText) findViewById(R.id.signUpPageName);
+        signUpEmail = (EditText) findViewById(R.id.signUpPageEmail);
+        signUpUser = (EditText) findViewById(R.id.signUpPageUser);
+        signUpPass = (EditText) findViewById(R.id.signUpPagePass);
 
         languageDB = new LanguageDB(this);
 
@@ -39,20 +38,24 @@ public class SignUpActivity extends AppCompatActivity {
     }
     //Logic to call insertData of LanguageDB class
     public void signUp(View v){
-        String name=name1.getText().toString();
-        String email=email1.getText().toString();
-        String username=username1.getText().toString();
-        String password=password1.getText().toString();
+        String name=signUpName.getText().toString();
+        String email=signUpEmail.getText().toString();
+        String username=signUpUser.getText().toString();
+        String password=signUpPass.getText().toString();
         boolean result=SignUpActivity.languageDB.insertData(name, email, username, password);
 
         if (result) {
             Toast.makeText(SignUpActivity.this,"Welcome " + username + ", you are now registered!",Toast.LENGTH_LONG).show();
             //finish
-            name1.setText("");
-            email1.setText("");
-            username1.setText("");
-            password1.setText("");
-            startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
+            signUpName.setText("");
+            signUpEmail.setText("");
+            signUpUser.setText("");
+            signUpPass.setText("");
+
+            //Navigate to HomeActivity after user registered - *NOT HAPPENING*
+            //startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
+            Intent i=new Intent(SignUpActivity.this,SignInActivity.class);
+            startActivity(i);
         }
         else {
             AlertDialog.Builder ad=new AlertDialog.Builder(this);

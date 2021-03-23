@@ -52,7 +52,7 @@
         android:layout_height="46dp"
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
-        android:text="TextView"
+        android:text="Name"
         android:textColor="@color/design_default_color_primary"
         android:textSize="30sp"
         android:textStyle="bold"

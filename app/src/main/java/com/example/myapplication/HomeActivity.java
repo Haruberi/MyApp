@@ -14,11 +14,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+        //ist för nameuserText, nameText?
         nameText=(TextView)findViewById(R.id.nameUserText);
 
         Bundle b=getIntent().getExtras();
-        String username=b.getString("username");
-        nameText.setText(username);
+        String name=b.getString("name");
+        nameText.setText(name);
 
     }
 }

@@ -12,41 +12,43 @@ import android.widget.Toast;
 
 public class SignInActivity extends AppCompatActivity {
 
-    EditText username1, password1;
+    EditText signInUser, signInPass;
     static LanguageDB languageDB;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        username1 = (EditText) findViewById(R.id.signInPageUser);
-        password1 = (EditText) findViewById(R.id.signInPagePass);
+        signInUser = (EditText) findViewById(R.id.signInPageUser);
+        signInPass = (EditText) findViewById(R.id.signInPagePass);
         languageDB = new LanguageDB(this);
     }
 
     //logic for sign in
-    public void signIn(View v) {
-        String username = username1.getText().toString();
-        String password = password1.getText().toString();
+    public void signInPageButton(View v) {
+        String username = signInUser.getText().toString();
+        String pass = signInPass.getText().toString();
         Cursor c = SignInActivity.languageDB.userLoginCheck(username);
         c.moveToFirst();
 
         if (c == null) {
             Toast.makeText(SignInActivity.this, "Invalid credentials for " + username, Toast.LENGTH_LONG).show();
-            username1.setText("");
-            password1.setText("");
+            signInUser.setText("");
+            signInPass.setText("");
         } else {
-            String username2 = c.getString(0);
-            String password2 = c.getString(1);
-            if (password1.equals(password2)) {
+            //name and password from languageDB
+            String name = c.getString(0);
+            String password = c.getString(1);
+
+            if (pass.equals(password)) {
                 Intent i = new Intent(SignInActivity.this, HomeActivity.class);
-                i.putExtra("username", username2);
+                i.putExtra("name", name);
                 startActivity(i);
-            } else{
-                Toast.makeText(SignInActivity.this,"Invalid credentials for user "+username,Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(SignInActivity.this, "Invalid credentials for user " + username, Toast.LENGTH_LONG).show();
             }
-            username1.setText("");
-            password1.setText("");
+            signInUser.setText("");
+            signInPass.setText("");
         }
     }
 }

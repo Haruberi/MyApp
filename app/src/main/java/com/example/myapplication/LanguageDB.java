@@ -23,6 +23,7 @@ public class LanguageDB extends SQLiteOpenHelper {
             String qry="create table LanguageUserTab(Name TEXT, Email TEXT, Username TEXT, Password TEXT)";
             db.execSQL(qry);
             Toast.makeText(c, "Table created successfully ", Toast.LENGTH_LONG).show();
+
         } catch(Exception e) {
             Log.e("LanguageDB","Table creation error",e);
         }
