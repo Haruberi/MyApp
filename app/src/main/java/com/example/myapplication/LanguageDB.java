@@ -39,7 +39,7 @@ public class LanguageDB extends SQLiteOpenHelper {
             String qry = "insert into LanguageUserTab values('" + name + "', '" + email + "','" + username + "', '" + password + "')";
             SQLiteDatabase db = getWritableDatabase();
             db.execSQL(qry);
-            Toast.makeText(c, name + " Registered successfully ", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, name + "Glad you joined, " + name + "\n \t You are now an official member!", Toast.LENGTH_LONG).show();
             return true;
         } catch (Exception e) {
             Log.e("LanguageDB", "Insertion of record failed", e);
