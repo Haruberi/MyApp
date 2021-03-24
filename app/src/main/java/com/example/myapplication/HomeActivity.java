@@ -14,6 +14,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+
         nameText=(TextView)findViewById(R.id.nameUserText);
 
         Bundle b=getIntent().getExtras();
