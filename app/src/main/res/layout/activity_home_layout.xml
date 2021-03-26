@@ -41,6 +41,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="420dp"
         android:layout_height="84dp"
+        android:addStatesFromChildren="false"
         android:background="@color/background_purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,28 +49,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:tabMode="fixed">
+        app:tabIndicatorColor="@color/white"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/learnTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_learn"
-            android:text="learn" />
-
+            android:text="@string/learnTabText" />
         <com.google.android.material.tabs.TabItem
             android:id="@+id/homeTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_home"
-            android:text="home" />
+            android:text="@string/homeTabText" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/faqTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_check"
-            android:text="faq" />
+            android:text="@string/faqTabText" />
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viPager"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
