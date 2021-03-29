@@ -2,14 +2,16 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class PageAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     private int numOfTabs;
-    public PageAdapter(@NonNull FragmentManager fm, int numOfTabs) {
-        super(fm, numOfTabs);
+    ViewPagerAdapter(FragmentManager fm, int numOfTabs){
+        super(fm,numOfTabs);
         this.numOfTabs=numOfTabs;
     }
 
@@ -32,9 +34,5 @@ public class PageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return numOfTabs;
     }
-
-    @Override
-    public int getItemPosition(@NonNull Object object) {
-        return POSITION_NONE;
-    }
 }
+

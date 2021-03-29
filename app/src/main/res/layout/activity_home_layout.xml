@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_purple">
 
+
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
@@ -16,9 +17,10 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.258" />
+        app:layout_constraintVertical_bias="0.409" />
 
     <TextView
         android:id="@+id/nameUserText"
@@ -45,10 +47,10 @@
         android:background="@color/background_purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.055"
         app:tabIndicatorColor="@color/white"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/white"
@@ -60,6 +62,7 @@
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_learn"
             android:text="@string/learnTabText" />
+
         <com.google.android.material.tabs.TabItem
             android:id="@+id/homeTab"
             android:layout_width="wrap_content"
@@ -76,8 +79,12 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/viPager"/>
+        app:layout_editor_absoluteX="178dp"
+        app:layout_editor_absoluteY="354dp"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="84dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
