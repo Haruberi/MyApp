@@ -31,17 +31,20 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
 
-        tbLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLearn=(TabItem)findViewById(R.id.learnTab);
-        tabHome=findViewById(R.id.homeTab);
-        tabFaq=findViewById(R.id.faqTab);
-        viPager2=findViewById(R.id.viPager);
-        ViewPagerAdapter viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),tbLayout.getTabCount());
+        tbLayout = findViewById(R.id.tabLayout);
+        tabLearn= findViewById(R.id.learnTab);
+        tabHome = findViewById(R.id.homeTab);
+        tabFaq = findViewById(R.id.faqTab);
+        viPager2 = findViewById(R.id.viPager);
+
+        //getCount of tbLayout == tabLayout from ViewPagerAdapter
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),tbLayout.getTabCount());
         viPager2.setAdapter(viewPagerAdapter);
+
         viPager2.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tbLayout));
 
         //for getting Name of user
-        nameText = (TextView) findViewById(R.id.nameUserText);
+        nameText = findViewById(R.id.nameUserText);
 
         Bundle b = getIntent().getExtras();
         String name = b.getString("name");

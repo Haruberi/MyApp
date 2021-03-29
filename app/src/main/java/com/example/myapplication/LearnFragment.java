@@ -18,6 +18,7 @@ public class LearnFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //Inflate the menu for this fragment
         setHasOptionsMenu(true);
         return inflater.inflate(R.layout.fragment_learn,container,false);
     }
