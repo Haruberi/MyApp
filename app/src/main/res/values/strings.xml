@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Language app</string>
     <string name="title_activity_sign_in">SignInActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -9,12 +9,16 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="learnTabText">LEARN</string>
     <string name="homeTabText">HOME</string>
     <string name="faqTabText">FAQ</string>
 
+    <string name="languageText"> </string>
+    <string name="mailText"> </string>
+    <string name="subscribeText"> </string>
+    <string name="signOutText"> </string>
 
 </resources>
