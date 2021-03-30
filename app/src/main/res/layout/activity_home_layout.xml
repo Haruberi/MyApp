@@ -34,23 +34,23 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/welcomeText"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="@+id/welcomeText"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="420dp"
-        android:layout_height="84dp"
+        android:layout_width="408dp"
+        android:layout_height="108dp"
         android:addStatesFromChildren="false"
-        android:background="@color/background_purple"
+        android:background="@color/tab_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055"
+        app:layout_constraintVertical_bias="0.0"
         app:tabIndicatorColor="@color/white"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/white"
@@ -84,7 +84,8 @@
         android:layout_height="match_parent"
         app:layout_editor_absoluteX="178dp"
         app:layout_editor_absoluteY="354dp"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="84dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="-16dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,11 +8,26 @@
     android:background="@color/background_purple"
     tools:context=".HomeFragment">
 
+    <TextView
+        android:id="@+id/nameUserText"
+        android:layout_width="253dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="332dp"
+        android:fontFamily="casual"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="NAME"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textWelcome"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="@+id/textWelcome" />
 
     <TextView
         android:id="@+id/textWelcome"
-        android:layout_width="242dp"
-        android:layout_height="60dp"
+        android:layout_width="244dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal"
