@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/background_purple">
 
-
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
@@ -38,6 +37,15 @@
         app:layout_constraintStart_toStartOf="@+id/welcomeText"
         app:layout_constraintTop_toBottomOf="@+id/welcomeText"
         app:layout_constraintVertical_bias="0.044" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_editor_absoluteX="178dp"
+        app:layout_editor_absoluteY="354dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="-16dp">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -78,14 +86,7 @@
             android:text="@string/faqTabText" />
     </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_editor_absoluteX="178dp"
-        app:layout_editor_absoluteY="354dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="-16dp" />
+    </androidx.viewpager.widget.ViewPager>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

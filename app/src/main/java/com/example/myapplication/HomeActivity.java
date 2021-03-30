@@ -42,6 +42,24 @@ public class HomeActivity extends AppCompatActivity {
         viPager2.setAdapter(viewPagerAdapter);
 
         viPager2.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tbLayout));
+        //add
+        tbLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viPager2.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        //end
 
         //for getting Name of user
         nameText = findViewById(R.id.nameUserText);

@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -9,6 +11,7 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
+
 
     private int numOfTabs;
     ViewPagerAdapter(FragmentManager fm, int numOfTabs){
