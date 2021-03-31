@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Language app</string>
     <string name="title_activity_sign_in">SignInActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
+
+
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">Welcome</string>
+
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
@@ -16,9 +16,34 @@
     <string name="homeTabText">HOME</string>
     <string name="faqTabText">FAQ</string>
 
-    <string name="languageText"> </string>
-    <string name="mailText"> </string>
-    <string name="subscribeText"> </string>
-    <string name="signOutText"> </string>
+
+    <!--Activity Sign in-->
+    <string name="signInTitle">Sign in</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="forgotPasswordText">Forgot password?</string>
+
+    <!--Activity Sign up-->
+    <string name="signUpTitle">Sign up</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_email">Email</string>
+    <string name="alreadyRegistered">Already Registered?</string>
+
+    <!--Activity Main-->
+    <string name="mainTitle">Welcome!</string>
+    <string name="mainSignIn">Sign in here</string>
+    <string name="mainSignUp">Sign up here</string>
+
+
+    <!--fragment home-->
+    <string name="nameText">NAME</string>
+    <string name="welcome">Welcome</string>
+    <string name="contentDesImage"> </string>
+
+    <!--fragment learn-->
+    <string name="chooseLanguageText">Choose a language to learn :</string>
+
+    <!--fragment faq-->
+    <string name="faqTitle">FAQ Page</string>
 
 </resources>

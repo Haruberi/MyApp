@@ -11,41 +11,38 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    int numOfTabs;
+    private List<Fragment> fragments=new ArrayList<>();
+    private List<String> Title=new ArrayList<>();
     public ViewPagerAdapter(FragmentManager fm,
                             int behaviour){
         super(fm,behaviour);
-        numOfTabs = behaviour;
     }
 
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int position) {
-
-        return super.getPageTitle(position);
+    public void addFragment(Fragment fragment,String title){
+        fragments.add(fragment);
+        Title.add(title);
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                return new LearnFragment();
-            case 1:
-                return new HomeFragment();
-            case 2:
-                return new FaqFragment();
-            default:
-                return null;
-        }
+        return fragments.get(position);
     }
 
     @Override
     public int getCount() {
+        return fragments.size();
+    }
 
-        return numOfTabs;
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return Title.get(position);
     }
 }
 

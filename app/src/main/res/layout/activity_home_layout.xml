@@ -27,7 +27,7 @@
         android:layout_height="46dp"
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
-        android:text="NAME"
+        android:text="@string/nameText"
         android:textColor="@color/design_default_color_primary"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -38,20 +38,11 @@
         app:layout_constraintTop_toBottomOf="@+id/welcomeText"
         app:layout_constraintVertical_bias="0.044" />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_editor_absoluteX="178dp"
-        app:layout_editor_absoluteY="354dp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="-16dp">
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="408dp"
         android:layout_height="108dp"
-        android:background="#7AD070F3"
+        android:background="#E2400368"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -59,14 +50,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:tabIndicatorColor="@color/white"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="@color/white">
+        app:tabSelectedTextColor="#BFECE2F3"
+        app:tabTextColor="#ADC28BD8">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/learnTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_learn"
+            android:soundEffectsEnabled="true"
             android:text="@string/learnTabText" />
 
         <com.google.android.material.tabs.TabItem
@@ -74,6 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_home"
+            android:soundEffectsEnabled="true"
             android:text="@string/homeTabText" />
 
         <com.google.android.material.tabs.TabItem
@@ -81,11 +74,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_check"
+            android:soundEffectsEnabled="true"
             android:text="@string/faqTabText" />
 
     </com.google.android.material.tabs.TabLayout>
 
-
-    </androidx.viewpager.widget.ViewPager>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_editor_absoluteX="178dp"
+        app:layout_editor_absoluteY="354dp"></androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

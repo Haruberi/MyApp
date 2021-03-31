@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="#F5879D"
+    android:background="@color/background_purple"
     tools:context=".HomeFragment">
 
     <TextView
         android:id="@+id/nameUserText"
         android:layout_width="253dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="332dp"
+        android:layout_marginBottom="304dp"
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
-        android:text="NAME"
+        android:text="@string/nameText"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -31,7 +31,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +51,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.258"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/contentDesImage"/>
 
 
 

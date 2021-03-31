@@ -17,17 +17,15 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class HomeActivity extends AppCompatActivity {
-    //Initialize variable
-    private TextView nameText;
-
-    private TabLayout tbLayout;
-
-    private LearnFragment tabLearn;
-    private HomeFragment tabHome;
-    private FaqFragment tabFaq;
 
     private ViewPager viewPager;
-    private ViewPagerAdapter viPaAdapter;
+    private TabLayout tbLayout;
+
+    private LearnFragment learnFrag;
+    private HomeFragment homeFrag;
+    private FaqFragment faqFrag;
+
+    private ViewPagerAdapter viewPagerAdapter;
 
 
     @Override
@@ -35,51 +33,19 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
 
-        tbLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viPager);
+        tbLayout = findViewById(R.id.tabLayout);
 
-        tabLearn=new LearnFragment();
-        tabHome=new HomeFragment();
-        tabFaq=new FaqFragment();
-
+        learnFrag = new LearnFragment();
+        homeFrag = new HomeFragment();
+        faqFrag = new FaqFragment();
         tbLayout.setupWithViewPager(viewPager);
 
-        viPaAdapter=new ViewPagerAdapter(getSupportFragmentManager(),tbLayout.getTabCount());
-        viewPager.setAdapter(viPaAdapter);
-
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tbLayout));
-
-        tbLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-
-                }
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-        //for getting Name of user
-        nameText = findViewById(R.id.nameUserText);
-        Bundle b = getIntent().getExtras();
-        String name = b.getString("name");
-        nameText.setText(name);
-
-
-
-
-        //getCount of tbLayout == tabLayout from ViewPagerAdapter
-
-        //ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),tbLayout.getTabCount());
-        //viewPager.setAdapter(viewPagerAdapter);
-
+        viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
+        viewPagerAdapter.addFragment(learnFrag,"LEARN");
+        viewPagerAdapter.addFragment(homeFrag,"HOME");
+        viewPagerAdapter.addFragment(faqFrag,"FAQ");
+        viewPager.setAdapter(viewPagerAdapter);
     }
 }
 
