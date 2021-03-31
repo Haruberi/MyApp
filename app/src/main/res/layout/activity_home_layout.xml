@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/diplomata"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textColor="@color/white"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,8 +51,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="408dp"
         android:layout_height="108dp"
-        android:addStatesFromChildren="false"
-        android:background="@color/tab_color"
+        android:background="#7AD070F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -60,7 +59,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:tabIndicatorColor="@color/white"
-        app:tabMode="fixed"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/white">
 
@@ -84,9 +82,10 @@
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_check"
             android:text="@string/faqTabText" />
+
     </com.google.android.material.tabs.TabLayout>
 
-    </androidx.viewpager.widget.ViewPager>
 
+    </androidx.viewpager.widget.ViewPager>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

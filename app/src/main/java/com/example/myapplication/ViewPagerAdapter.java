@@ -13,15 +13,17 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
 
-    private int numOfTabs;
-    ViewPagerAdapter(FragmentManager fm, int numOfTabs){
-        super(fm,numOfTabs);
-        this.numOfTabs=numOfTabs;
+    int numOfTabs;
+    public ViewPagerAdapter(FragmentManager fm,
+                            int behaviour){
+        super(fm,behaviour);
+        numOfTabs = behaviour;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
+
         return super.getPageTitle(position);
     }
 
@@ -42,6 +44,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
+
         return numOfTabs;
     }
 }

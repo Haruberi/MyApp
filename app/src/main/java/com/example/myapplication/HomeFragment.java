@@ -17,9 +17,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeFragment extends Fragment {
 
-    ViewPager viewPager;
-    ViewPagerAdapter viewPagerAdapter;
-
     public HomeFragment(){}
 
 
@@ -29,7 +26,9 @@ public class HomeFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        return inflater.inflate(R.layout.fragment_home,container,false);
+        return inflater.inflate(R.layout.fragment_home,
+                container,
+                false);
     }
 }
 

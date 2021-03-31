@@ -18,12 +18,16 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class HomeActivity extends AppCompatActivity {
     //Initialize variable
-    TextView nameText;
-    TabLayout tbLayout;
-    TabItem tabLearn;
-    TabItem tabHome;
-    TabItem tabFaq;
-    ViewPager viPager2;
+    private TextView nameText;
+
+    private TabLayout tbLayout;
+
+    private LearnFragment tabLearn;
+    private HomeFragment tabHome;
+    private FaqFragment tabFaq;
+
+    private ViewPager viewPager;
+    private ViewPagerAdapter viPaAdapter;
 
 
     @Override
@@ -32,23 +36,25 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_layout);
 
         tbLayout = findViewById(R.id.tabLayout);
-        tabLearn= findViewById(R.id.learnTab);
-        tabHome = findViewById(R.id.homeTab);
-        tabFaq = findViewById(R.id.faqTab);
-        viPager2 = findViewById(R.id.viPager);
+        viewPager = findViewById(R.id.viPager);
 
-        //getCount of tbLayout == tabLayout from ViewPagerAdapter
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),tbLayout.getTabCount());
-        viPager2.setAdapter(viewPagerAdapter);
+        tabLearn=new LearnFragment();
+        tabHome=new HomeFragment();
+        tabFaq=new FaqFragment();
 
-        viPager2.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tbLayout));
-        //add
+        tbLayout.setupWithViewPager(viewPager);
+
+        viPaAdapter=new ViewPagerAdapter(getSupportFragmentManager(),tbLayout.getTabCount());
+        viewPager.setAdapter(viPaAdapter);
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tbLayout));
+
         tbLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viPager2.setCurrentItem(tab.getPosition());
-            }
+                viewPager.setCurrentItem(tab.getPosition());
 
+                }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
@@ -59,14 +65,21 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-        //end
 
         //for getting Name of user
         nameText = findViewById(R.id.nameUserText);
-
         Bundle b = getIntent().getExtras();
         String name = b.getString("name");
         nameText.setText(name);
+
+
+
+
+        //getCount of tbLayout == tabLayout from ViewPagerAdapter
+
+        //ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),tbLayout.getTabCount());
+        //viewPager.setAdapter(viewPagerAdapter);
+
     }
 }
 

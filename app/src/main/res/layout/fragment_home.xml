@@ -5,14 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="@color/background_purple"
+    android:background="#F5879D"
     tools:context=".HomeFragment">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/frameLayout">
-    </FrameLayout>
 
     <TextView
         android:id="@+id/nameUserText"
@@ -22,7 +16,7 @@
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
         android:text="NAME"
-        android:textColor="@color/design_default_color_primary"
+        android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
