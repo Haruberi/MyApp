@@ -42,6 +42,9 @@
 
     <!--fragment learn-->
     <string name="chooseLanguageText">Choose a language to learn :</string>
+    <string name="chooseJpnBtnText">Japanese</string>
+    <string name="chooseChiBtnText">Chinese</string>
+    <string name="chooseKorBtnText">Korean</string>
 
     <!--fragment faq-->
     <string name="faqTitle">FAQ Page</string>

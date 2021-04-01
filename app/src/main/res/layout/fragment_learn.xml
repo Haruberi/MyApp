@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F64779"
+    android:background="#5BB5F1"
     tools:context=".LearnFragment">
 
     <TextView
@@ -14,13 +14,56 @@
         android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal"
         android:text="@string/chooseLanguageText"
-        android:textColor="@color/white"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.281"/>
+        app:layout_constraintVertical_bias="0.198" />
+
+    <Button
+        android:id="@+id/chooseJpnBtn"
+        android:layout_width="118dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/roundbtn_bg"
+        android:text="@string/chooseJpnBtnText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/chooseChiBtn"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="@+id/textLearn"
+        app:layout_constraintTop_toBottomOf="@+id/textLearn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/chooseChiBtn"
+        android:layout_width="118dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/roundbtn_bg"
+        android:text="@string/chooseChiBtnText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textLearn"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLearn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/chooseKorBtn"
+        android:layout_width="118dp"
+        android:layout_height="112dp"
+        android:background="@drawable/roundbtn_bg"
+        android:text="@string/chooseKorBtnText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chooseJpnBtn"
+        app:layout_constraintTop_toBottomOf="@+id/chooseJpnBtn"
+        app:layout_constraintVertical_bias="0.316" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
