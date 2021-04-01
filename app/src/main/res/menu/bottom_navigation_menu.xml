@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/accountBtn"
+        android:enabled="true"
+        android:icon="@drawable/account_bottom_icon"
+        android:title="@string/accountTitle"/>
+
+    <item
+        android:id="@+id/mailBtn"
+        android:enabled="true"
+        android:icon="@drawable/mail_bottom_icon"
+        android:title="@string/mailTitle"/>
+
+    <item
+        android:id="@+id/subsBtn"
+        android:enabled="true"
+        android:icon="@drawable/subscribe_bottom_icon"
+        android:title="@string/subsTitle"/>
+
+    <item
+        android:id="@+id/signOutBtn"
+        android:enabled="true"
+        android:icon="@drawable/signout_bottom_icon"
+        android:title="@string/signOutTitle"/>
+</menu>

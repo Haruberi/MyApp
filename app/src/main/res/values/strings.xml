@@ -46,4 +46,13 @@
     <!--fragment faq-->
     <string name="faqTitle">FAQ Page</string>
 
+    <!--Account Bottom-->
+    <string name="accountTitle">Home</string>
+    <!--Mail Bottom-->
+    <string name="mailTitle">My mail</string>
+    <!--Subscribe Bottom-->
+    <string name="subsTitle">Subscribe</string>
+    <!--Sign out Bottom-->
+    <string name="signOutTitle">Sign out</string>
+
 </resources>
