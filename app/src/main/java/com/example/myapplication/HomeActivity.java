@@ -28,7 +28,6 @@ public class HomeActivity extends AppCompatActivity {
     private ViewPagerAdapter viewPagerAdapter;
 
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,11 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(homeFrag,"HOME");
         viewPagerAdapter.addFragment(faqFrag,"FAQ");
         viewPager.setAdapter(viewPagerAdapter);
-
-
     }
-
-
 }
 
 

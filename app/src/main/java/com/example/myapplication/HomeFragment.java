@@ -19,6 +19,10 @@ public class HomeFragment extends Fragment {
 
     public HomeFragment(){}
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Nullable
     @Override

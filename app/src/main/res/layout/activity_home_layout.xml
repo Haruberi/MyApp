@@ -42,16 +42,16 @@
         android:id="@+id/tabLayout"
         android:layout_width="408dp"
         android:layout_height="108dp"
-        android:background="#E21481AE"
+        android:background="@color/background_purple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:tabIndicatorColor="@color/white"
-        app:tabSelectedTextColor="#BFECE2F3"
-        app:tabTextColor="#AD86A7E1">
+        app:tabIndicatorColor="#DFDDE3"
+        app:tabSelectedTextColor="#BF000000"
+        app:tabTextColor="#C98759B5">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/learnTab"

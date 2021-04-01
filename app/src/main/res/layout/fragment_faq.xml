@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A8F587"
+    android:background="#76EF54"
     tools:context=".FaqFragment">
 
 
     <TextView
         android:id="@+id/texFaq"
-        android:layout_width="240dp"
-        android:layout_height="90dp"
-        android:background="@drawable/btn_bg"
+        android:layout_width="316dp"
+        android:layout_height="103dp"
+        android:background="@drawable/roundbtn_bg"
         android:fontFamily="monospace"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/faqTitle"
