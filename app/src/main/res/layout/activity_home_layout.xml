@@ -42,7 +42,7 @@
         android:id="@+id/tabLayout"
         android:layout_width="408dp"
         android:layout_height="108dp"
-        android:background="#E2400368"
+        android:background="#E21481AE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -51,22 +51,22 @@
         app:layout_constraintVertical_bias="0.0"
         app:tabIndicatorColor="@color/white"
         app:tabSelectedTextColor="#BFECE2F3"
-        app:tabTextColor="#ADC28BD8">
+        app:tabTextColor="#AD86A7E1">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/learnTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_learn"
-            android:soundEffectsEnabled="true"
-            android:text="@string/learnTabText" />
+            android:isScrollContainer="false"
+            android:text="@string/learnTabText"
+            />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/homeTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_home"
-            android:soundEffectsEnabled="true"
             android:text="@string/homeTabText" />
 
         <com.google.android.material.tabs.TabItem
@@ -74,7 +74,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_baseline_check"
-            android:soundEffectsEnabled="true"
             android:text="@string/faqTabText" />
 
     </com.google.android.material.tabs.TabLayout>
