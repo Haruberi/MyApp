@@ -58,4 +58,12 @@
     <!--Sign out Bottom-->
     <string name="signOutTitle">Sign out</string>
 
+    <!--Forgot password fragment-->
+    <string name="forgotPassPageText">Forgot your password ?</string>
+    <string name="recoveryLetterText">Enter email for recovery letter :</string>
+    <!--Send recovery letter for password recovery button-->
+    <string name="sendLetter">Send</string>
+    <!--Go back to Main activity button-->
+    <string name="goBack">Back</string>
+
 </resources>

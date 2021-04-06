@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignInActivity extends AppCompatActivity {
@@ -22,6 +23,15 @@ public class SignInActivity extends AppCompatActivity {
         signInUser = (EditText) findViewById(R.id.signInPageUser);
         signInPass = (EditText) findViewById(R.id.signInPagePass);
         languageDB = new LanguageDB(this);
+
+        //Navigate to Forgot Password page
+        TextView forgotPasswordLink = findViewById(R.id.forgotPassword);
+        forgotPasswordLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignInActivity.this, ForgotPassActivity.class));
+            }
+        });
     }
 
     //logic for sign in
