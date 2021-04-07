@@ -42,9 +42,11 @@
 
     <!--fragment learn-->
     <string name="chooseLanguageText">Choose a language to learn :</string>
-    <string name="chooseJpnBtnText">Japanese</string>
-    <string name="chooseChiBtnText">Chinese</string>
-    <string name="chooseKorBtnText">Korean</string>
+    <string name="chooseJpnBtnText">JAPANESE</string>
+    <string name="chooseChiBtnText">CHINESE</string>
+    <string name="chooseKorBtnText">KOREAN</string>
+    <string name="chooseBtn">Choose</string>
+    <string name="jpnContext">Learn the language which is built up with characters from hiragana, katakana and kanji...!</string>
 
     <!--fragment faq-->
     <string name="faqTitle">FAQ Page</string>
