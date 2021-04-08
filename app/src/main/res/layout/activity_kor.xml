@@ -10,7 +10,7 @@
         android:id="@+id/korTabLayout"
         android:layout_width="425dp"
         android:layout_height="106dp"
-        android:background="#2C2C2B"
+        android:background="#F1E950"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -18,8 +18,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:tabIndicatorColor="#6BED0C"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="#6BED0C">
+        app:tabSelectedTextColor="#6BED0C"
+        app:tabTextColor="#EFAD3C">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/korLearnTab"

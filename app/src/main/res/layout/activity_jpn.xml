@@ -11,16 +11,16 @@
         android:id="@+id/jpnTabLayout"
         android:layout_width="425dp"
         android:layout_height="106dp"
-        android:background="#E83F53"
+        android:background="#F1E950"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:tabIndicatorColor="#0B0A0A"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="#EA537E">
+        app:tabIndicatorColor="#EA537E"
+        app:tabSelectedTextColor="#EA537E"
+        app:tabTextColor="#EFAD3C">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/jpnLearnTab"
