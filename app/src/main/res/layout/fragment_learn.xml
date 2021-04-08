@@ -11,7 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
         >
 
         <!--Japanese card-->
@@ -19,7 +19,7 @@
             android:id="@+id/jpnCard"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.453"
@@ -122,6 +122,7 @@
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/chiCard"
             app:layout_constraintStart_toStartOf="@+id/chiCard"
@@ -131,9 +132,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="136dp"
-                tools:layout_editor_absoluteY="624dp">
+                android:layout_height="match_parent">
 
                 <Button
                     android:id="@+id/korBtn"
