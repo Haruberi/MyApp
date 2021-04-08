@@ -36,7 +36,6 @@ public class KorActivity extends AppCompatActivity {
         korLayout.setupWithViewPager(korView);
 
         korVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
-        korVPAdapter.addFragment(korLearn,"LEARN");
         //level
         korVPAdapter.addFragment(korFaq,"FAQ");
         korView.setAdapter(korVPAdapter);

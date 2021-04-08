@@ -36,7 +36,6 @@ public class ChiActivity extends AppCompatActivity {
         chiLayout.setupWithViewPager(chiView);
 
         chiVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
-        chiVPAdapter.addFragment(chiLearn,"LEARN");
         //level
         chiVPAdapter.addFragment(chiFaq,"FAQ");
         chiView.setAdapter(chiVPAdapter);

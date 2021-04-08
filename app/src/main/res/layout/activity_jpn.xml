@@ -23,12 +23,6 @@
         app:tabTextColor="#EFAD3C">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/jpnLearnTab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/learnTabText" />
-
-        <com.google.android.material.tabs.TabItem
             android:id="@+id/jpnLevelTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

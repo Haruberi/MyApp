@@ -36,7 +36,6 @@ public class JpnActivity extends AppCompatActivity {
         jpnLayout.setupWithViewPager(jpnView);
 
         jpnVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
-        jpnVPAdapter.addFragment(jpnLearn,"LEARN");
         //Level
         jpnVPAdapter.addFragment(jpnFaq,"FAQ");
         jpnView.setAdapter(jpnVPAdapter);
