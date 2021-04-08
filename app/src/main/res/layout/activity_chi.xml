@@ -11,7 +11,7 @@
         android:id="@+id/chiTabLayout"
         android:layout_width="425dp"
         android:layout_height="106dp"
-        android:background="#F1E950"
+        android:background="#6EABF6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
@@ -19,8 +19,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:tabIndicatorColor="#FA4904"
-        app:tabSelectedTextColor="#FA4904"
-        app:tabTextColor="#EFAD3C">
+        app:tabSelectedTextColor="#E6001B"
+        app:tabTextColor="#754A72A5">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/chiLevelTab"
