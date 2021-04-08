@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JpnActivity">
-
+    tools:context=".KorActivity">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/japTabLayout"
+        android:id="@+id/korTabLayout"
         android:layout_width="425dp"
         android:layout_height="106dp"
         android:background="#2C2C2B"
@@ -18,38 +17,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:tabIndicatorColor="#EA537E"
+        app:tabIndicatorColor="#6BED0C"
         app:tabSelectedTextColor="@color/white"
-        app:tabTextColor="#EA537E">
+        app:tabTextColor="#6BED0C">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/jpnLearnTab"
+            android:id="@+id/korLearnTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/learnTabText" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/jpnLevelTab"
+            android:id="@+id/korLevelTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/levelTabText" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/jpnFaqTab"
+            android:id="@+id/korFaqTab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/faqTabText" />
     </com.google.android.material.tabs.TabLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/jpnBottom_nav"
+        android:id="@+id/chiBottom_nav"
         android:layout_width="414dp"
         android:layout_height="53dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/japTabLayout"
+        app:layout_constraintTop_toBottomOf="@+id/korTabLayout"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/bottom_navigation_menu" />
 

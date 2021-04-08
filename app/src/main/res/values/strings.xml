@@ -16,6 +16,11 @@
     <string name="homeTabText">HOME</string>
     <string name="faqTabText">FAQ</string>
 
+    <!--Activity Japanese-->
+    <string name="levelTabText">LEVELS</string>
+    <!--Activity Chinese-->
+    <!--Activity Korean-->
+
 
     <!--Activity Sign in-->
     <string name="signInTitle">Sign in</string>
