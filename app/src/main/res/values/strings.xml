@@ -50,6 +50,10 @@
 
     <!--fragment faq-->
     <string name="faqTitle">FAQ Page</string>
+    <string name="iconTitle">ICONS</string>
+    <string name="lvlTitle">LANGUAGE LEVELS</string>
+    <string name="memberTitle">MEMBERSHIP</string>
+    <string name="read">READ MORE</string>
 
     <!--Account Bottom-->
     <string name="accountTitle">Home</string>

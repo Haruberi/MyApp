@@ -12,6 +12,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -26,12 +27,17 @@ public class HomeActivity extends AppCompatActivity {
     private FaqFragment faqFrag;
 
     private ViewPagerAdapter viewPagerAdapter;
+    private BottomNavigationView botNav;
+
+
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+
+        botNav=findViewById(R.id.bottom_navigation);
 
         viewPager = findViewById(R.id.viPager);
         tbLayout = findViewById(R.id.tabLayout);
