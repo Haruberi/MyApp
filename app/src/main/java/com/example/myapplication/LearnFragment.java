@@ -40,12 +40,33 @@ public class LearnFragment extends Fragment {
         setHasOptionsMenu(true);
         View v =inflater.inflate(R.layout.fragment_learn,container,false);
 
+        //Navigate to KorActivity
+        Button gotoKor=(Button) v.findViewById(R.id.korBtn);
+        gotoKor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent korIn=new Intent(getActivity(),KorActivity.class);
+                startActivity(korIn);
+            }
+        });
+
+        //Navigate to ChiActivity
+        Button gotoChi =(Button) v.findViewById(R.id.chiBtn);
+        gotoChi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent chiIn=new Intent(getActivity(),ChiActivity.class);
+                startActivity(chiIn);
+            }
+        });
+
+        //Navigate to JpnActivity
         Button goToJpn = (Button) v.findViewById(R.id.jpnBtn);
         goToJpn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),JpnActivity.class);
-                startActivity(intent);
+                Intent japIn=new Intent(getActivity(),JpnActivity.class);
+                startActivity(japIn);
             }
         });
         return v;
