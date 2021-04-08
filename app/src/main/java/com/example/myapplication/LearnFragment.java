@@ -12,10 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class LearnFragment extends Fragment {
-
-    Button chooseJpnBtn;
 
     public LearnFragment(){}
 
@@ -31,15 +30,32 @@ public class LearnFragment extends Fragment {
 
     }
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
         setHasOptionsMenu(true);
-        return inflater.inflate(R.layout.fragment_learn,
-                container,
-                false);
+        View v =inflater.inflate(R.layout.fragment_learn,container,false);
+
+        Button goToJpn = (Button) v.findViewById(R.id.jpnBtn);
+        goToJpn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),JpnActivity.class);
+                startActivity(intent);
+            }
+        });
+        return v;
+        //return inflater.inflate(R.layout.fragment_learn,
+          //      container,
+            //    false);
+
+
+
+
 
 
     }
