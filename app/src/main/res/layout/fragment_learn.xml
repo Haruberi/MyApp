@@ -17,7 +17,7 @@
         <!--Japanese card-->
         <androidx.cardview.widget.CardView
             android:id="@+id/jpnCard"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -47,6 +47,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.894" />
 
+                <!--Title-->
                 <TextView
                     android:id="@+id/jpnTitle"
                     android:layout_width="wrap_content"
@@ -62,13 +63,30 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.1" />
 
+                <!--Supporting text-->
+                <TextView
+                    android:id="@+id/jpnContextText"
+                    android:layout_width="218dp"
+                    android:layout_height="81dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:text="@string/jpnContext"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="#0755DD"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/jpnBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/jpnTitle"
+                    app:layout_constraintStart_toStartOf="@+id/jpnTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/jpnTitle" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <!--Chinese card-->
         <androidx.cardview.widget.CardView
             android:id="@+id/chiCard"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +94,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/jpnCard"
             app:layout_constraintTop_toBottomOf="@+id/jpnCard"
-            app:layout_constraintVertical_bias="0.069">
+            app:layout_constraintVertical_bias="0.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -98,6 +116,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.894" />
 
+                <!--Title-->
                 <TextView
                     android:id="@+id/chiTitle"
                     android:layout_width="wrap_content"
@@ -112,17 +131,37 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.158" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+
+                <!--Supporting text-->
+                <TextView
+                    android:id="@+id/chiContextText"
+                    android:layout_width="181dp"
+                    android:layout_height="77dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:text="@string/chiContext"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="#0755DD"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/chiBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/chiTitle"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toStartOf="@+id/chiTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/chiTitle"
+                    app:layout_constraintVertical_bias="1.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
 
         <!--Korean card-->
         <androidx.cardview.widget.CardView
             android:id="@+id/korCard"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/chiCard"
             app:layout_constraintStart_toStartOf="@+id/chiCard"
@@ -150,6 +189,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.887" />
 
+                <!--Title-->
                 <TextView
                     android:id="@+id/korTitle"
                     android:layout_width="wrap_content"
@@ -164,6 +204,22 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.148" />
+
+                <TextView
+                    android:id="@+id/korContextText"
+                    android:layout_width="178dp"
+                    android:layout_height="72dp"
+                    android:fontFamily="casual"
+                    android:gravity="center_horizontal"
+                    android:text="@string/korContext"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="#0755DD"
+                    android:textSize="14sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toTopOf="@+id/korBtn"
+                    app:layout_constraintEnd_toEndOf="@+id/korTitle"
+                    app:layout_constraintStart_toStartOf="@+id/korTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/korTitle" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

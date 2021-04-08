@@ -51,7 +51,9 @@
     <string name="chooseChiBtnText">CHINESE</string>
     <string name="chooseKorBtnText">KOREAN</string>
     <string name="chooseBtn">Choose</string>
-    <string name="jpnContext">Learn the language which is built up with characters from hiragana, katakana and kanji...!</string>
+    <string name="jpnContext">Learn the language which is built up from the characters from hiragana, katakana and kanji!</string>
+    <string name="chiContext">Learn this language that writes everything entirely in hanji!</string>
+    <string name="korContext">This language has an interesting character alphabetical view!</string>
 
     <!--fragment faq-->
     <string name="faqTitle">FAQ Page</string>
