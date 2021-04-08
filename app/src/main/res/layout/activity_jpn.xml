@@ -11,14 +11,14 @@
         android:id="@+id/jpnTabLayout"
         android:layout_width="425dp"
         android:layout_height="106dp"
-        android:background="#2C2C2B"
+        android:background="#E83F53"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:tabIndicatorColor="#EA537E"
+        app:tabIndicatorColor="#0B0A0A"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="#EA537E">
 
