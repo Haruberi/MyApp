@@ -13,8 +13,7 @@ public class JpnActivity extends AppCompatActivity {
     private ViewPager jpnView;
     private TabLayout jpnLayout;
 
-    private LearnFragment jpnLearn;
-    //LevelFragment
+    private JpnLvlFragment jpnLevel;
     private FaqFragment jpnFaq;
 
     private ViewPagerAdapter jpnVPAdapter;
@@ -30,13 +29,12 @@ public class JpnActivity extends AppCompatActivity {
         jpnView=findViewById(R.id.jpnViewPager);
         jpnLayout=findViewById(R.id.jpnTabLayout);
 
-        jpnLearn=new LearnFragment();
-        //LevelFragment
+        jpnLevel=new JpnLvlFragment();
         jpnFaq=new FaqFragment();
         jpnLayout.setupWithViewPager(jpnView);
 
         jpnVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
-        //Level
+        jpnVPAdapter.addFragment(jpnLevel,"LEVELS");
         jpnVPAdapter.addFragment(jpnFaq,"FAQ");
         jpnView.setAdapter(jpnVPAdapter);
     }
