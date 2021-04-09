@@ -22,12 +22,6 @@ public class LearnFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Navigate to JpnActivity
-
-        //Navigate to ChiActivity
-
-        //Navigate to KorActivity
-
     }
 
 

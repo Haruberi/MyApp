@@ -39,6 +39,17 @@
     <string name="mainSignIn">Sign in here</string>
     <string name="mainSignUp">Sign up here</string>
 
+    <!--Level 1 Activity-->
+    <string name="btnStart">START</string>
+
+    <!--Japan Level Fragment-->
+    <string name="jpnlvlTitle">JAPANESE LEVELS</string>
+    <string name="lvl1More">READ MORE</string>
+    <string name="lvl1">LEVEL 1</string>
+    <string name="lvl2">LEVEL 2</string>
+    <string name="lvl3">LEVEL 3</string>
+    <string name="lvl1Context">NOUNS QUIZ</string>
+
 
     <!--fragment home-->
     <string name="nameText">NAME</string>
