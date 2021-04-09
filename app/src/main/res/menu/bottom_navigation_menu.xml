@@ -8,16 +8,16 @@
         android:title="@string/accountTitle"/>
 
     <item
-        android:id="@+id/mailBtn"
+        android:id="@+id/backBtn"
         android:enabled="true"
-        android:icon="@drawable/mail_bottom_icon"
-        android:title="@string/mailTitle"/>
+        android:icon="@drawable/ic_baseline_back"
+        android:title="@string/backTitle"/>
 
     <item
-        android:id="@+id/subsBtn"
+        android:id="@+id/forwardBtn"
         android:enabled="true"
-        android:icon="@drawable/subscribe_bottom_icon"
-        android:title="@string/subsTitle"/>
+        android:icon="@drawable/ic_baseline_forward"
+        android:title="@string/forwardTitle"/>
 
     <item
         android:id="@+id/signOutBtn"

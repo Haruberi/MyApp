@@ -6,4 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".JpnLvl1Activity">
 
+    <TextView
+        android:id="@+id/jpnlvl1Title"
+        android:layout_width="275dp"
+        android:layout_height="62dp"
+        android:fontFamily="@font/diplomata"
+        android:gravity="center_horizontal"
+        android:text="@string/lvl1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/lvl1Context"
+        android:layout_width="377dp"
+        android:layout_height="255dp"
+        android:gravity="center_horizontal|fill_horizontal"
+        android:text="@string/loremText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/jpnlvl1Title"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="@+id/jpnlvl1Title"
+        app:layout_constraintTop_toBottomOf="@+id/jpnlvl1Title"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="246dp"
+        android:layout_height="136dp"
+        android:background="@drawable/input_bg"
+        android:text="@string/btnStart"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lvl1Context"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="@+id/lvl1Context"
+        app:layout_constraintTop_toBottomOf="@+id/lvl1Context"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/jpnBottom_nav"
+        android:layout_width="414dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jpnTabLayout"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_navigation_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
