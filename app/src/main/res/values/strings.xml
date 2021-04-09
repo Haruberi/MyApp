@@ -24,6 +24,20 @@
     <!--Activity Korean-->
 
 
+
+    <!--Quiz activity-->
+    <string name="scoreText">Score: 0</string>
+    <string name="questionCount">Word 1/x</string>
+    <string name="timer">01:00</string>
+    <string name="wordTest">The word</string>
+    <string name="btnNext">NEXT</string>
+
+    <!--RadioButton-->
+    <string name="radio1">Option 1</string>
+    <string name="radio2">Option 2</string>
+    <string name="radio3">Option 3</string>
+
+
     <!--Activity Sign in-->
     <string name="signInTitle">Sign in</string>
     <string name="prompt_username">Username</string>
@@ -52,6 +66,30 @@
     <string name="lvl3">LEVEL 3</string>
     <string name="lvl1Context">NOUNS QUIZ</string>
 
+    <!--Jpn Level 1-3 Fragment-->
+    <!--Words 1-->
+    <string name="jpnWord1">ケーキ</string>
+    <string name="jpnWord2">コーヒー</string>
+    <string name="jpnWord3">犬</string>
+    <string name="jpnWord4">友達</string>
+    <string name="jpnWord5">彼氏</string>
+    <!--Sentence 1-->
+    <string name="jpnWord1Sentence">家族と一緒にでバッターで焼いてできた甘いスイーツを作りました。</string>
+    <string name="jpnWord2Sentence">喫茶店で茶色暖かい飲み物を頼みました。</string>
+    <string name="jpnWord3Sentence">彼は公園にワンワンって動物と散歩しました。</string>
+    <string name="jpnWord4Sentence">仲良くできた知り合いと映画を見に行きました。</string>
+    <string name="jpnWord5Sentence">愛している男とデートしに行きました。</string>
+    <!--Translated sentence 1-->
+    <string name="jpnWord1Tra">Together with my family, we made something sweet that is fried from batter.</string>
+    <string name="jpnWord2Tra">At the cafe, I ordered a warm and brown drink.</string>
+    <string name="jpnWord3Tra">He took a walk in the park with an animal who says "woof".</string>
+    <string name="jpnWord4Tra">Together with a person she got along with, they went to see a movie.</string>
+    <string name="jpnWord5Tra">Together with the love of his/hers life, they went on a date.</string>
+    <!--RadioButton 1-->
+    <string name="radio1jpn">Dog</string>
+    <string name="radio2jpn">Cake</string>
+    <string name="radio3jpn">Friend</string>
+
 
     <!--fragment home-->
     <string name="nameText">NAME</string>
@@ -65,9 +103,6 @@
     <string name="chooseKorBtnText">KOREAN</string>
 
     <string name="chooseBtn">Choose</string>
-    <string name="jpnContext">日本語</string>
-    <string name="chiContext">汉语</string>
-    <string name="korContext"></string>
 
     <!--fragment faq-->
     <string name="faqTitle">FAQ Page</string>
