@@ -80,7 +80,7 @@
     </RadioGroup>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/wordId"
         android:layout_width="181dp"
         android:layout_height="66dp"
         android:text="@string/wordTest"
@@ -104,4 +104,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupId"
         app:layout_constraintVertical_bias="0.486" />
+
+    <TextView
+        android:id="@+id/wordSentence"
+        android:layout_width="290dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="544dp"
+        android:text="@string/wordSentence"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/wordId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/wordId" />
+
+    <TextView
+        android:id="@+id/translationSentence"
+        android:layout_width="293dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="496dp"
+        android:text="@string/wordTranslation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/wordSentence"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/wordSentence"
+        app:layout_constraintTop_toBottomOf="@+id/wordSentence"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
