@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -9,6 +10,9 @@ import com.example.myapplication.QuizContract.*;
 import com.example.myapplication.TheWord.*;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuizDBHelper extends SQLiteOpenHelper {
 
@@ -79,5 +83,27 @@ public class QuizDBHelper extends SQLiteOpenHelper {
         cv.put(WordTable.COLUMN_ANSWER_NR,theWord.getAnswerNr());
         db.insert(WordTable.TABLE_NAME,null,cv);
 
+    }
+
+    public List<TheWord> getAllWords(){
+        List<TheWord> theWordList =new ArrayList<>();
+        db=getReadableDatabase();
+        Cursor c=db.rawQuery("SELECT * FROM " + WordTable.TABLE_NAME,null);
+
+        if (c.moveToFirst()){
+            do {
+                TheWord theWord=new TheWord();
+                theWord.setTheWord(c.getString(c.getColumnIndex(WordTable.COLUMN_WORD)));
+                theWord.setWordSentence(c.getString(c.getColumnIndex(WordTable.COLUMN_SENTENCE)));
+                theWord.setOption1(c.getString(c.getColumnIndex(WordTable.COLUMN_OPTION1)));
+                theWord.setOption2(c.getString(c.getColumnIndex(WordTable.COLUMN_OPTION2)));
+                theWord.setOption3(c.getString(c.getColumnIndex(WordTable.COLUMN_OPTION3)));
+                theWord.setAnswerNr(c.getInt(c.getColumnIndex(WordTable.COLUMN_ANSWER_NR)));
+                theWordList.add(theWord);
+            } while (c.moveToNext());
+        }
+
+        c.close();
+        return theWordList;
     }
 }
