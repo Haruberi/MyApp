@@ -24,7 +24,6 @@ public class HomeActivity extends AppCompatActivity {
 
     private LearnFragment learnFrag;
     private HomeFragment homeFrag;
-    private FaqFragment faqFrag;
 
     private ViewPagerAdapter viewPagerAdapter;
     private BottomNavigationView botNav;
@@ -44,13 +43,11 @@ public class HomeActivity extends AppCompatActivity {
 
         learnFrag = new LearnFragment();
         homeFrag = new HomeFragment();
-        faqFrag = new FaqFragment();
         tbLayout.setupWithViewPager(viewPager);
 
         viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
         viewPagerAdapter.addFragment(learnFrag,"LEARN");
         viewPagerAdapter.addFragment(homeFrag,"HOME");
-        viewPagerAdapter.addFragment(faqFrag,"FAQ");
         viewPager.setAdapter(viewPagerAdapter);
     }
 }

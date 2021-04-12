@@ -2,22 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/faqBtn"
+        android:enabled="true"
+        android:icon="@drawable/faq_bottom_icon"
+        android:title="@string/faqTabText"/>
+
+    <item
         android:id="@+id/accountBtn"
         android:enabled="true"
         android:icon="@drawable/account_bottom_icon"
         android:title="@string/accountTitle"/>
-
-    <item
-        android:id="@+id/backBtn"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_back"
-        android:title="@string/backTitle"/>
-
-    <item
-        android:id="@+id/forwardBtn"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_forward"
-        android:title="@string/forwardTitle"/>
 
     <item
         android:id="@+id/signOutBtn"
