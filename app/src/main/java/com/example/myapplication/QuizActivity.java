@@ -38,6 +38,7 @@ public class QuizActivity extends AppCompatActivity {
     private int wordCountTotal;
     private TheWord currWord;
 
+
     private int score;
     private boolean answered;
 
@@ -48,8 +49,8 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         textViewWord=findViewById(R.id.wordId);
-        textViewSentence=findViewById(R.id.wordSentence);
-        textViewTranslation=findViewById(R.id.translationSentence);
+        //textViewSentence=findViewById(R.id.wordSentence);
+        //textViewTranslation=findViewById(R.id.translationSentence);
         textViewScore=findViewById(R.id.scoreId);
         textViewWordCount=findViewById(R.id.wordCountId);
         textViewTimer=findViewById(R.id.timerId);
@@ -74,6 +75,25 @@ public class QuizActivity extends AppCompatActivity {
         rb1.setTextColor(textColorDefaultRb);
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
+        rbGroup.clearCheck();
 
+        if (wordCounter < wordCountTotal){
+            currWord = theWordList.get(wordCounter);
+
+            textViewWord.setText(currWord.getTheWord());
+            rb1.setText(currWord.getOption1());
+            rb2.setText(currWord.getOption2());
+            rb3.setText(currWord.getOption3());
+
+            wordCounter++;
+            textViewWordCount.setText("Word: " + wordCounter + "/" + wordCountTotal);
+            answered=false;
+            buttonNext.setText("Confirm");
+        } else {
+            finishQuiz();
+        }
+    }
+    private void finishQuiz(){
+        finish();
     }
 }

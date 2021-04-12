@@ -105,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroupId"
         app:layout_constraintVertical_bias="0.486" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/wordSentence"
         android:layout_width="290dp"
         android:layout_height="22dp"
@@ -127,5 +127,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/wordSentence"
         app:layout_constraintTop_toBottomOf="@+id/wordSentence"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
