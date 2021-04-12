@@ -54,6 +54,17 @@
         tools:src="@tools:sample/avatars"
         android:contentDescription="@string/contentDesImage"/>
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:src="@drawable/ic_baseline_helpfaq"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
