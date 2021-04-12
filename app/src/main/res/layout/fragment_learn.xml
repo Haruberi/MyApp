@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:fillViewport="true"
-    android:background="#6EABF6"
+    android:background="#9577B3"
     tools:context=".LearnFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -208,7 +208,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/diplomata"
             android:text="@string/chooseLanguageText"
-            android:textColor="#090909"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/jpnCard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
