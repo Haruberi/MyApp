@@ -14,7 +14,7 @@ public class JpnActivity extends AppCompatActivity {
     private TabLayout jpnLayout;
 
     private JpnLvlFragment jpnLevel;
-    private FaqFragment jpnFaq;
+    private HomeFragment jpnHome;
 
     private ViewPagerAdapter jpnVPAdapter;
     private BottomNavigationView jpnBottom;
@@ -30,12 +30,12 @@ public class JpnActivity extends AppCompatActivity {
         jpnLayout=findViewById(R.id.jpnTabLayout);
 
         jpnLevel=new JpnLvlFragment();
-        jpnFaq=new FaqFragment();
+        jpnHome=new HomeFragment();
         jpnLayout.setupWithViewPager(jpnView);
 
         jpnVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
         jpnVPAdapter.addFragment(jpnLevel,"LEVELS");
-        jpnVPAdapter.addFragment(jpnFaq,"FAQ");
+        jpnVPAdapter.addFragment(jpnHome,"HOME");
         jpnView.setAdapter(jpnVPAdapter);
     }
 }

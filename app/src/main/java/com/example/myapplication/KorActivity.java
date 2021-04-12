@@ -15,7 +15,7 @@ public class KorActivity extends AppCompatActivity {
 
     private LearnFragment korLearn;
     //Level
-    private FaqFragment korFaq;
+    private HomeFragment korHome;
 
     private ViewPagerAdapter korVPAdapter;
     private BottomNavigationView korBottom;
@@ -32,12 +32,12 @@ public class KorActivity extends AppCompatActivity {
 
         korLearn=new LearnFragment();
         //Level
-        korFaq=new FaqFragment();
+        korHome=new HomeFragment();
         korLayout.setupWithViewPager(korView);
 
         korVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
         //level
-        korVPAdapter.addFragment(korFaq,"FAQ");
+        korVPAdapter.addFragment(korHome,"HOME");
         korView.setAdapter(korVPAdapter);
 
     }

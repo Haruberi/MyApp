@@ -15,7 +15,7 @@ public class ChiActivity extends AppCompatActivity {
 
     private LearnFragment chiLearn;
     //Level
-    private FaqFragment chiFaq;
+    private HomeFragment chiHome;
 
     private ViewPagerAdapter chiVPAdapter;
     private BottomNavigationView chiBottom;
@@ -32,12 +32,12 @@ public class ChiActivity extends AppCompatActivity {
 
         chiLearn=new LearnFragment();
         //Level
-        chiFaq=new FaqFragment();
+        chiHome=new HomeFragment();
         chiLayout.setupWithViewPager(chiView);
 
         chiVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
         //level
-        chiVPAdapter.addFragment(chiFaq,"FAQ");
+        chiVPAdapter.addFragment(chiHome,"HOME");
         chiView.setAdapter(chiVPAdapter);
 
     }
