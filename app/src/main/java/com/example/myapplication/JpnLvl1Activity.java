@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 
 public class JpnLvl1Activity extends AppCompatActivity {
+    private static final int REQUEST_CODE_QUIZ=1;
+
+    public static final String SHARED_PREFS="sharedPrefs";
+    public static final String KEY_HIGHSCORE="keyHighscore";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,6 @@ public class JpnLvl1Activity extends AppCompatActivity {
     //here open our second activity quizactivity
     private void startQuiz(){
         Intent intent=new Intent(JpnLvl1Activity.this,QuizActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }
 }
