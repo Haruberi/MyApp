@@ -38,9 +38,7 @@ public class QuizActivity extends AppCompatActivity {
     private ColorStateList textColorDefaultRb;
 
     private List<TheWord> theWordList;
-    //wordCounter - räknar hur många ord som visats
     private int wordCounter;
-    //Hur många word counts det finns totalt
     private int wordCountTotal;
     private TheWord currWord;
 
