@@ -17,7 +17,7 @@ import java.util.List;
 public class QuizDBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME="LanguageQuiz.db";
-    public static final int DATABASE_VERSION=1;
+    public static final int DATABASE_VERSION=2;
     private SQLiteDatabase db;
 
     public QuizDBHelper(Context context) {
@@ -54,20 +54,20 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     }
 
     private void fillWordsTable(){
-        TheWord tw1=new TheWord("A", "Bokstav A", "Word A", "A", "B", "C", 1 );
+        TheWord tw1=new TheWord("コーヒー", "彼は喫茶店で '茶色暖かい飲み物' を飲みました ", "He drank a 'brown warm drink' at the café.", "Coffee", "Cat", "Milk", 1 );
         addWord(tw1);
 
 
-        TheWord tw2=new TheWord("B", "Bokstav B", "Word B", "A", "B", "C", 2 );
+        TheWord tw2=new TheWord("お水", "友達とジムに行ったときにいつも '冷たい飲み物' を持ってきました。", "When I went to the gym with my friend, I always brought a 'bottle of cold drink' with me.", "Warm tea", "Water", "Pineapple", 2 );
         addWord(tw2);
 
-        TheWord tw3=new TheWord("C", "Bokstav C", "Word C", "A", "B", "C", 3 );
+        TheWord tw3=new TheWord("ケーキ", "明日は彼氏の誕生日なので私は 'バッターから焼いてできたスイーツ' を作ります。", "Tomorrow is the birthday of my boyfriend so I am going to make 'a sweet that’s made from batter' for him.", "Flower", "Walk", "Cake", 3 );
         addWord(tw3);
 
-        TheWord tw4=new TheWord("D", "Bokstav D", "Word D", "D", "E", "F", 1 );
+        TheWord tw4=new TheWord("犬", "公園に 'ワンワンしていた動物' と一緒に散歩しました。", "I took a walk with 'an animal who said woof' in the park.", "Dog", "Elephant", "Rose", 1 );
         addWord(tw4);
 
-        TheWord tw5=new TheWord("E", "Bokstav A", "Word E", "E", "F", "G", 1 );
+        TheWord tw5=new TheWord("バナナ", "果物なら '一本黄色い果物' が好きです。", "If there is one fruit I like, it is 'one long yellow fruit'.", "Apple", "Banana", "Paper", 2 );
         addWord(tw5);
 
     }
