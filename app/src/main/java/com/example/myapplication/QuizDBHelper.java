@@ -16,8 +16,8 @@ import java.util.List;
 
 public class QuizDBHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME="LanguageQuiz.db";
-    public static final int DATABASE_VERSION=2;
+    private static final String DATABASE_NAME="JapaneseQuizTable.db";
+    public static final int DATABASE_VERSION=1;
     private SQLiteDatabase db;
 
     public QuizDBHelper(Context context) {
@@ -47,9 +47,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     //Om man vill lägga till fler columner måste man meddela det här i onUpgrade samt skriva version 1 till 2 i database_version
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        //droppar den existerande databasen
         db.execSQL("DROP TABLE IF EXISTS " + WordTable.TABLE_NAME);
-        //skapar en ny
         onCreate(db);
     }
 

@@ -6,27 +6,37 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
 
     public static final String EXTRA_SCORE ="extraScore";
 
+    private TextToSpeech langTTS;
+    private SeekBar speakSeek;
+    private ImageButton listenBtn;
+
+
     private TextView textViewWord;
+
     private TextView textViewSentence;
     private TextView textViewTranslation;
 
     private TextView textViewScore;
     private TextView textViewWordCount;
-    private TextView textViewTimer;
 
     private RadioGroup rbGroup;
     private RadioButton rb1;
@@ -58,7 +68,6 @@ public class QuizActivity extends AppCompatActivity {
         //textViewTranslation=findViewById(R.id.translationSentence);
         textViewScore=findViewById(R.id.scoreId);
         textViewWordCount=findViewById(R.id.wordCountId);
-        textViewTimer=findViewById(R.id.timerId);
         rbGroup=findViewById(R.id.radioGroupId);
         rb1=findViewById(R.id.radioBtn1);
         rb2=findViewById(R.id.radioBtn2);
@@ -87,8 +96,15 @@ public class QuizActivity extends AppCompatActivity {
                     showNextWord();
                 }
             }
+
         });
     }
+
+
+
+
+
+
 
     private void showNextWord(){
         rb1.setTextColor(textColorDefaultRb);

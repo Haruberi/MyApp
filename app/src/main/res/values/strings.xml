@@ -32,6 +32,8 @@
     <string name="btnNext">NEXT</string>
     <string name="wordSentence">Sentence</string>
     <string name="wordTranslation">Sentence Translation</string>
+    <string name="exitText">Exit</string>
+    <string name="speedText">Speed</string>
 
     <!--RadioButton-->
     <string name="radio1">Option 1</string>

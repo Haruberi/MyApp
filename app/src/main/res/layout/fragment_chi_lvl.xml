@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ChiLvlFragment"
     android:background="#6EABF6">
-        <!--Level 1-->
 
 
 </ScrollView>
