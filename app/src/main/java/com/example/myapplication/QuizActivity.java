@@ -100,12 +100,6 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
-
-
-
-
-
-
     private void showNextWord(){
         rb1.setTextColor(textColorDefaultRb);
         rb2.setTextColor(textColorDefaultRb);
@@ -151,15 +145,15 @@ public class QuizActivity extends AppCompatActivity {
         switch (currWord.getAnswerNr()){
             case 1:
                 rb1.setTextColor(Color.GREEN);
-                textViewWord.setText("Answer 1 is correct!");
+                textViewWord.setText("A is correct!");
                 break;
             case 2:
                 rb2.setTextColor(Color.GREEN);
-                textViewWord.setText("Answer 2 is correct!");
+                textViewWord.setText("B is correct!");
                 break;
             case 3:
                 rb3.setTextColor(Color.GREEN);
-                textViewWord.setText("Answer 3 is correct!");
+                textViewWord.setText("C is correct!");
                 break;
         }
 
