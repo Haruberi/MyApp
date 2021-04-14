@@ -52,7 +52,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     }
 
     private void fillWordsTable(){
-        TheWord tw1=new TheWord("コーヒー\n koohii", "彼は喫茶店で '茶色暖かい飲み物' を飲みました ", "He drank a 'brown warm drink' at the café.", "A: Coffee", "B: Cat", "AC: Milk", 1 );
+        TheWord tw1=new TheWord("コーヒー", "彼は喫茶店で '茶色暖かい飲み物' を飲みました ", "He drank a 'brown warm drink' at the café.", "A: Coffee", "B: Cat", "AC: Milk", 1 );
         addWord(tw1);
 
 
