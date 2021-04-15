@@ -7,12 +7,13 @@
     tools:context=".JpnQuizActivity">
 
     <TextView
-        android:id="@+id/jpnlvl1Title"
+        android:id="@+id/jpnAboutId"
         android:layout_width="297dp"
         android:layout_height="83dp"
         android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal"
         android:text="@string/quizAbout"
+        android:textColor="@color/jpnColor"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,43 +22,46 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <TextView
-        android:id="@+id/lvl1Context"
-        android:layout_width="377dp"
-        android:layout_height="255dp"
-        android:gravity="center_horizontal|fill_horizontal"
+        android:id="@+id/JpnQuizContext"
+        android:layout_width="364dp"
+        android:layout_height="309dp"
+        android:fontFamily="casual"
+        android:gravity="fill_horizontal"
         android:text="@string/loremText"
-        android:textSize="18sp"
         android:textColor="@color/jpnColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/jpnlvl1Title"
+        app:layout_constraintEnd_toEndOf="@+id/jpnAboutId"
         app:layout_constraintHorizontal_bias="0.382"
-        app:layout_constraintStart_toStartOf="@+id/jpnlvl1Title"
-        app:layout_constraintTop_toBottomOf="@+id/jpnlvl1Title"
+        app:layout_constraintStart_toStartOf="@+id/jpnAboutId"
+        app:layout_constraintTop_toBottomOf="@+id/jpnAboutId"
         app:layout_constraintVertical_bias="0.204" />
 
     <Button
-        android:id="@+id/btnStart"
+        android:id="@+id/jpnBtnStart"
         android:layout_width="246dp"
         android:layout_height="136dp"
         android:background="@drawable/input_bg"
         android:text="@string/btnStart"
+        android:textColor="@color/black"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lvl1Context"
-        app:layout_constraintHorizontal_bias="0.419"
-        app:layout_constraintStart_toStartOf="@+id/lvl1Context"
-        app:layout_constraintTop_toBottomOf="@+id/lvl1Context"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintEnd_toEndOf="@+id/JpnQuizContext"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="@+id/JpnQuizContext"
+        app:layout_constraintTop_toBottomOf="@+id/JpnQuizContext"
+        app:layout_constraintVertical_bias="0.196" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/jpnBottom_nav"
-        android:layout_width="414dp"
-        android:layout_height="57dp"
+        android:layout_width="421dp"
+        android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jpnTabLayout"
+        app:layout_constraintTop_toBottomOf="@+id/jpnBtnStart"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/bottom_navigation_menu" />
 
@@ -67,13 +71,14 @@
         android:layout_height="37dp"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center_horizontal"
-        android:text="Your score :"
+        android:text="@string/yourScore"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lvl1Context"
-        app:layout_constraintEnd_toEndOf="@+id/jpnlvl1Title"
+        app:layout_constraintBottom_toTopOf="@+id/JpnQuizContext"
+        app:layout_constraintEnd_toEndOf="@+id/jpnAboutId"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/jpnlvl1Title"
-        app:layout_constraintTop_toBottomOf="@+id/jpnlvl1Title"
+        app:layout_constraintStart_toStartOf="@+id/jpnAboutId"
+        app:layout_constraintTop_toBottomOf="@+id/jpnAboutId"
         app:layout_constraintVertical_bias="0.338" />
 </androidx.constraintlayout.widget.ConstraintLayout>

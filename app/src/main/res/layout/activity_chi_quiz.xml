@@ -6,4 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".ChiQuizActivity">
 
+    <TextView
+        android:id="@+id/chiAboutId"
+        android:layout_width="297dp"
+        android:layout_height="83dp"
+        android:fontFamily="@font/diplomata"
+        android:gravity="center_horizontal"
+        android:text="@string/quizAbout"
+        android:textColor="@color/chiColor"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <TextView
+        android:id="@+id/ChiQuizContext"
+        android:layout_width="359dp"
+        android:layout_height="314dp"
+        android:fontFamily="casual"
+        android:gravity="fill_horizontal"
+        android:text="@string/loremText"
+        android:textColor="@color/chiColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chiAboutId"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <Button
+        android:id="@+id/chiBtnStart"
+        android:layout_width="246dp"
+        android:layout_height="136dp"
+        android:background="@drawable/input_bg"
+        android:text="@string/btnStart"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ChiQuizContext"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/ChiQuizContext"
+        app:layout_constraintTop_toBottomOf="@+id/ChiQuizContext"
+        app:layout_constraintVertical_bias="0.296" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/chiBottom_nav"
+        android:layout_width="421dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chiBtnStart"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <TextView
+        android:id="@+id/chiHighScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal"
+        android:text="@string/yourScore"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ChiQuizContext"
+        app:layout_constraintEnd_toEndOf="@+id/chiAboutId"
+        app:layout_constraintStart_toStartOf="@+id/chiAboutId"
+        app:layout_constraintTop_toBottomOf="@+id/chiAboutId"
+        app:layout_constraintVertical_bias="0.373" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

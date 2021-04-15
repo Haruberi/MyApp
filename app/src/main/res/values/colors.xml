@@ -11,6 +11,7 @@
     <color name="chiColor">#CD3D05</color>
     <color name="jpnColor">#CC1D4F</color>
     <color name="korColor">#38710F</color>
+    <color name="black">#000000</color>
 
 
 </resources>

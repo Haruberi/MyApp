@@ -28,7 +28,7 @@ public class JpnQuizActivity extends AppCompatActivity {
         textViewHighscore=findViewById(R.id.textViewHighscore);
         loadHighscore();
 
-        Button buttonStart=findViewById(R.id.btnStart);
+        Button buttonStart=findViewById(R.id.jpnBtnStart);
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

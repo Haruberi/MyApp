@@ -66,6 +66,7 @@
     <string name="lvl1More">READ MORE</string>
     <string name="quizAbout">About this quiz</string>
     <string name="quizTitle">QUIZ</string>
+    <string name="yourScore">Your score:</string>
     <!--China Level Fragment-->
     <string name="chiQuizTitle">CHINESE QUIZ</string>
     <!--Korean Level Fragment-->
