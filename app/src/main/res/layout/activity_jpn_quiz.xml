@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JpnLvl1Activity">
+    tools:context=".JpnQuizActivity">
 
     <TextView
         android:id="@+id/jpnlvl1Title"
-        android:layout_width="275dp"
-        android:layout_height="62dp"
+        android:layout_width="297dp"
+        android:layout_height="83dp"
         android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal"
-        android:text="@string/lvl1"
+        android:text="@string/quizAbout"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

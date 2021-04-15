@@ -62,17 +62,16 @@
     <string name="btnStart">START</string>
 
     <!--Japan Level Fragment-->
-    <string name="jpnlvlTitle">JAPANESE LEVELS</string>
+    <string name="jpnQuizTitle">JAPANESE QUIZ</string>
     <string name="lvl1More">READ MORE</string>
-    <string name="lvl1">LEVEL 1</string>
-    <string name="lvl2">LEVEL 2</string>
-    <string name="lvl3">LEVEL 3</string>
-    <string name="lvl1Context">NOUNS QUIZ</string>
-
+    <string name="quizAbout">About this quiz</string>
+    <string name="quizTitle">QUIZ</string>
     <!--China Level Fragment-->
-    <string name="chiLvlTitle">CHINESE LEVELS</string>
+    <string name="chiQuizTitle">CHINESE QUIZ</string>
+    <!--Korean Level Fragment-->
+    <string name="korQuizTitle">KOREAN QUIZ</string>
 
-    <!--Jpn Level 1-3 Fragment-->
+    <!--Jpn Level 1-Fragment - Quiz words-->
     <!--Words 1-->
     <string name="jpnWord1">ケーキ</string>
     <string name="jpnWord2">コーヒー</string>
@@ -90,11 +89,30 @@
     <string name="jpnWord2Tra">At the cafe, I ordered a warm and brown drink.</string>
     <string name="jpnWord3Tra">He took a walk in the park with an animal who says "woof".</string>
     <string name="jpnWord4Tra">Together with a person she got along with, they went to see a movie.</string>
-    <string name="jpnWord5Tra">Together with the love of his/hers life, they went on a date.</string>
+    <string name="jpnWord5Tra">Together with the male love of his/hers life, they went on a date.</string>
     <!--RadioButton 1-->
     <string name="radio1jpn">Dog</string>
     <string name="radio2jpn">Cake</string>
     <string name="radio3jpn">Friend</string>
+
+    <!--Chi Level 1-Fragment - Quiz words-->
+    <string name="chiWord1">h</string>
+    <string name="chiWord2">d</string>
+    <string name="chiWord3">d</string>
+    <string name="chiWord4">d</string>
+    <string name="chiWord5">d</string>
+    <!--Sentence-->
+    <string name="chiWord1Sentence"></string>
+    <string name="chiWord2Sentence"></string>
+    <string name="chiWord3Sentence"></string>
+    <string name="chiWord4Sentence"></string>
+    <string name="chiWord5Sentence"></string>
+    <!--Translated sentence-->
+    <string name="chiWord1Tra"></string>
+    <string name="chiWord2Tra"></string>
+    <string name="chiWord3Tra"></string>
+    <string name="chiWord4Tra"></string>
+    <string name="chiWord5Tra"></string>
 
 
     <!--fragment home-->

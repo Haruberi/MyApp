@@ -12,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class JpnLvlFragment extends Fragment {
+public class JpnQuizFragment extends Fragment {
 
-    public JpnLvlFragment() {
+    public JpnQuizFragment() {
         // Required empty public constructor
     }
 
@@ -30,24 +30,17 @@ public class JpnLvlFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         setHasOptionsMenu(true);
-        View view = inflater.inflate(R.layout.fragment_jpn_lvl, container, false);
+        View view = inflater.inflate(R.layout.fragment_jpn_quiz, container, false);
 
-        //Navigate to JpnLvl1Activity
-        Button goToJpnLvl1 = (Button) view.findViewById(R.id.btnReadMore);
+        //Navigate to JpnQuizActivity(Quiz för japanska)
+        Button goToJpnLvl1 = (Button) view.findViewById(R.id.gotoJpnQuiz);
         goToJpnLvl1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getActivity(), JpnLvl1Activity.class);
+                Intent in = new Intent(getActivity(), JpnQuizActivity.class);
                 startActivity(in);
             }
         });
-
-        //Navigate to JpnLvl2Activity
-        //Navigate to JpnLvl3Activity ....
         return view;
     }
 }
-
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_jpn_lvl, container, false);
-

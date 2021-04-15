@@ -47,25 +47,55 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     //Om man vill lägga till fler columner måste man meddela det här i onUpgrade samt skriva version 1 till 2 i database_version
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + WordTable.TABLE_NAME);
-        onCreate(db);
+        if (oldVersion < 2) {
+            TheWord tw1 = new TheWord("コーヒー", "彼は喫茶店で '茶色暖かい飲み物' を飲みました ", "He drank a 'brown warm drink' at the café.", "A: Coffee", "B: Cat", "AC: Milk", 1);
+            addWord(tw1);
+
+            TheWord tw2 = new TheWord("お水", "友達とジムに行ったときにいつも '冷たい飲み物' を持ってきました。", "When I went to the gym with my friend, I always brought a 'bottle of cold drink' with me.", "A: Warm tea", "B: Water", "C: Pineapple", 2);
+            addWord(tw2);
+
+            TheWord tw3 = new TheWord("ケーキ", "明日は彼氏の誕生日なので私は 'バッターから焼いてできたスイーツ' を作ります。", "Tomorrow is the birthday of my boyfriend so I am going to make 'a sweet that’s made from batter' for him.", "A: Flower", "B: Walk", "C: Cake", 3);
+            addWord(tw3);
+
+            TheWord tw4 = new TheWord("犬", "公園に 'ワンワンしていた動物' と一緒に散歩しました。", "I took a walk with 'an animal who said woof' in the park.", "A: Dog", "B: Elephant", "C: Rose", 1);
+            addWord(tw4);
+
+            TheWord tw5 = new TheWord("バナナ", "果物なら '一本黄色い果物' が好きです。", "If there is one fruit I like, it is 'one long yellow fruit'.", "A: Apple", "B: Banana", "C: Paper", 2);
+            addWord(tw5);
+        }
+        if (oldVersion<3){
+            TheWord tw1 = new TheWord("コーヒー", "彼は喫茶店で '茶色暖かい飲み物' を飲みました ", "He drank a 'brown warm drink' at the café.", "A: Coffee", "B: Cat", "C: Milk", 1);
+            addWord(tw1);
+
+            TheWord tw2 = new TheWord("お水", "友達とジムに行ったときにいつも '冷たい飲み物' を持ってきました。", "When I went to the gym with my friend, I always brought a 'bottle of cold drink' with me.", "A: Warm tea", "B: Water", "C: Pineapple", 2);
+            addWord(tw2);
+
+            TheWord tw3 = new TheWord("ケーキ", "明日は彼氏の誕生日なので私は 'バッターから焼いてできたスイーツ' を作ります。", "Tomorrow is the birthday of my boyfriend so I am going to make 'a sweet that’s made from batter' for him.", "A: Flower", "B: Walk", "C: Cake", 3);
+            addWord(tw3);
+
+            TheWord tw4 = new TheWord("犬", "公園に 'ワンワンしていた動物' と一緒に散歩しました。", "I took a walk with 'an animal who said woof' in the park.", "A: Dog", "B: Elephant", "C: Rose", 1);
+            addWord(tw4);
+
+            TheWord tw5 = new TheWord("バナナ", "果物なら '一本黄色い果物' が好きです。", "If there is one fruit I like, it is 'one long yellow fruit'.", "A: Apple", "B: Banana", "C: Paper", 2);
+            addWord(tw5);
+        }
+
     }
 
     private void fillWordsTable(){
-        TheWord tw1=new TheWord("コーヒー", "彼は喫茶店で '茶色暖かい飲み物' を飲みました ", "He drank a 'brown warm drink' at the café.", "A: Coffee", "B: Cat", "AC: Milk", 1 );
+        TheWord tw1=new TheWord("コーヒー", "彼は喫茶店で '茶色暖かい飲み' を飲みました ", "He drank a 'brown warm drink' at the café.", "A: Coffee", "B: Cat", "AC: Milk", 1 );
         addWord(tw1);
 
-
-        TheWord tw2=new TheWord("お水", "友達とジムに行ったときにいつも '冷たい飲み物' を持ってきました。", "When I went to the gym with my friend, I always brought a 'bottle of cold drink' with me.", "A: Warm tea", "B: Water", "C: Pineapple", 2 );
+        TheWord tw2=new TheWord("お水", "友達とジムに行ったときにいつも '冷たい飲み' を持ってきました。", "When I went to the gym with my friend, I always brought a 'bottle of cold drink' with me.", "A: Warm tea", "B: Water", "C: Pineapple", 2 );
         addWord(tw2);
 
-        TheWord tw3=new TheWord("ケーキ", "明日は彼氏の誕生日なので私は 'バッターから焼いてできたスイーツ' を作ります。", "Tomorrow is the birthday of my boyfriend so I am going to make 'a sweet that’s made from batter' for him.", "A: Flower", "B: Walk", "C: Cake", 3 );
+        TheWord tw3=new TheWord("ケーキ", "明日は彼氏の誕生日なので私は 'バッターから焼いてできたスイー' を作ります。", "Tomorrow is the birthday of my boyfriend so I am going to make 'a sweet that’s made from batter' for him.", "A: Flower", "B: Walk", "C: Cake", 3 );
         addWord(tw3);
 
-        TheWord tw4=new TheWord("犬", "公園に 'ワンワンしていた動物' と一緒に散歩しました。", "I took a walk with 'an animal who said woof' in the park.", "A: Dog", "B: Elephant", "C: Rose", 1 );
+        TheWord tw4=new TheWord("犬", "公園に 'ワンワンしていた動' と一緒に散歩しました。", "I took a walk with 'an animal who said woof' in the park.", "A: Dog", "B: Elephant", "C: Rose", 1 );
         addWord(tw4);
 
-        TheWord tw5=new TheWord("バナナ", "果物なら '一本黄色い果物' が好きです。", "If there is one fruit I like, it is 'one long yellow fruit'.", "A: Apple", "B: Banana", "C: Paper", 2 );
+        TheWord tw5=new TheWord("バナナ", "果物なら '一本黄色い果' が好きです。", "If there is one fruit I like, it is 'one long yellow fruit'.", "A: Apple", "B: Banana", "C: Paper", 2 );
         addWord(tw5);
 
     }

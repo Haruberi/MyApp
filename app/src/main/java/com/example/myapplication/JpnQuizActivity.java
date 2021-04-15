@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class JpnLvl1Activity extends AppCompatActivity {
+public class JpnQuizActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_QUIZ=1;
 
     //To show score - flytta detta sedan till HomeFragment, men gör först här
@@ -23,7 +23,7 @@ public class JpnLvl1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jpn_lvl1);
+        setContentView(R.layout.activity_jpn_quiz);
 
         textViewHighscore=findViewById(R.id.textViewHighscore);
         loadHighscore();
@@ -39,7 +39,7 @@ public class JpnLvl1Activity extends AppCompatActivity {
 
     //here open our second activity quizactivity
     private void startQuiz(){
-        Intent intent=new Intent(JpnLvl1Activity.this,QuizActivity.class);
+        Intent intent=new Intent(JpnQuizActivity.this,QuizActivity.class);
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }
 

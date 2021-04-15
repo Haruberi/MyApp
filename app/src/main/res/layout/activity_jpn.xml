@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:tabIndicatorColor="#EA0C4B"
-        app:tabSelectedTextColor="#CC1D4F"
+        app:tabSelectedTextColor="@color/jpnColor"
         app:tabTextColor="#754A72A5">
 
         <com.google.android.material.tabs.TabItem

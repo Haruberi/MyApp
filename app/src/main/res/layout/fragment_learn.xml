@@ -17,8 +17,8 @@
         <!--Japanese card-->
         <androidx.cardview.widget.CardView
             android:id="@+id/jpnCard"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
+            android:layout_width="231dp"
+            android:layout_height="142dp"
             android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +43,8 @@
                 <Button
                     android:id="@+id/jpnBtn"
                     style="?attr/borderlessButtonStyle"
-                    android:layout_width="252dp"
-                    android:layout_height="202dp"
+                    android:layout_width="237dp"
+                    android:layout_height="145dp"
                     android:fontFamily="casual"
                     android:textColor="#131313"
                     android:textSize="24sp"
@@ -78,8 +78,8 @@
         <!--Chinese card-->
         <androidx.cardview.widget.CardView
             android:id="@+id/chiCard"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
+            android:layout_width="231dp"
+            android:layout_height="142dp"
             android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/jpnCard"
@@ -88,23 +88,18 @@
             app:layout_constraintTop_toBottomOf="@+id/jpnCard"
             app:layout_constraintVertical_bias="0.0">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/china_flag"
-                android:scaleType="centerCrop"/>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <!--Title-->
 
+                <!--Supporting text-->
                 <Button
                     android:id="@+id/chiBtn"
                     style="?attr/borderlessButtonStyle"
-                    android:layout_width="252dp"
-                    android:layout_height="199dp"
+                    android:layout_width="240dp"
+                    android:layout_height="147dp"
                     android:fontFamily="casual"
                     android:paddingTop="2dp"
                     android:textColor="@color/white"
@@ -112,16 +107,14 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.504"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.955" />
+                    app:layout_constraintVertical_bias="1.0" />
 
-                <!--Supporting text-->
                 <TextView
                     android:id="@+id/chiTitle"
-                    android:layout_width="209dp"
-                    android:layout_height="35dp"
+                    android:layout_width="235dp"
+                    android:layout_height="38dp"
                     android:background="#F11E1E"
                     android:fontFamily="@font/diplomata"
                     android:gravity="center_horizontal"
@@ -131,10 +124,21 @@
                     android:textColor="#0B0A0A"
                     app:layout_constraintBottom_toBottomOf="@+id/chiBtn"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.224" />
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:layout_width="233dp"
+                    android:layout_height="107dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/china_flag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -142,8 +146,8 @@
         <!--Korean card-->
         <androidx.cardview.widget.CardView
             android:id="@+id/korCard"
-            android:layout_width="250dp"
-            android:layout_height="200dp"
+            android:layout_width="231dp"
+            android:layout_height="142dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -151,12 +155,6 @@
             app:layout_constraintStart_toStartOf="@+id/chiCard"
             app:layout_constraintTop_toBottomOf="@+id/chiCard"
             app:layout_constraintVertical_bias="0.104" >
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/korea_flag"
-                android:scaleType="centerCrop"/>
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -168,17 +166,18 @@
                 <Button
                     android:id="@+id/korBtn"
                     style="?attr/borderlessButtonStyle"
-                    android:layout_width="253dp"
-                    android:layout_height="204dp"
+                    android:layout_width="234dp"
+                    android:layout_height="146dp"
                     android:fontFamily="casual"
                     android:textColor="#050505"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.95" />
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/korTitle"
@@ -193,10 +192,22 @@
                     android:textColor="#0C0C0C"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/korBtn"
-                    app:layout_constraintHorizontal_bias="0.479"
+                    app:layout_constraintHorizontal_bias="0.166"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/korBtn"
-                    app:layout_constraintVertical_bias="0.112" />
+                    app:layout_constraintVertical_bias="0.064" />
+
+                <ImageView
+                    android:layout_width="202dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/korea_flag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.62"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.952" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
@@ -205,6 +216,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/diplomata"
+            android:gravity="center_horizontal"
             android:text="@string/chooseLanguageText"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/jpnCard"

@@ -13,7 +13,7 @@ public class ChiActivity extends AppCompatActivity {
     private ViewPager chiView;
     private TabLayout chiLayout;
 
-    private ChiLvlFragment chiLevel;
+    private ChiQuizFragment chiLevel;
     private HomeFragment chiHome;
 
     private ViewPagerAdapter chiVPAdapter;
@@ -29,7 +29,7 @@ public class ChiActivity extends AppCompatActivity {
         chiView=findViewById(R.id.chiViewPager);
         chiLayout=findViewById(R.id.chiTabLayout);
 
-        chiLevel=new ChiLvlFragment();
+        chiLevel=new ChiQuizFragment();
         chiHome=new HomeFragment();
         chiLayout.setupWithViewPager(chiView);
 
