@@ -12,7 +12,7 @@
         android:id="@+id/nameUserText"
         android:layout_width="253dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginBottom="516dp"
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/nameText"
@@ -21,14 +21,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textWelcome"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textWelcome" />
 
     <TextView
         android:id="@+id/textWelcome"
         android:layout_width="244dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal"
         android:text="@string/welcome"
@@ -38,33 +37,78 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <TextView
+        android:id="@+id/jpnLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/jpnLangText"
+        android:textAllCaps="true"
+        android:textColor="@color/jpnColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameUserText"
+        app:layout_constraintVertical_bias="0.181" />
+
+    <TextView
+        android:id="@+id/korLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/korLangText"
+        android:textAllCaps="true"
+        android:textColor="@color/jpnColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/chiLanguage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chiLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/chiLanguage"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <TextView
+        android:id="@+id/chiLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/chiLangText"
+        android:textAllCaps="true"
+        android:textColor="@color/jpnColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/jpnLanguage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/jpnLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/jpnLanguage"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <TextView
+        android:id="@+id/homeHighscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.258"
-        tools:src="@tools:sample/avatars"
-        android:contentDescription="@string/contentDesImage"/>
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="57dp"
-        android:layout_height="52dp"
-        android:src="@drawable/ic_baseline_helpfaq"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153" />
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/yourScore"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/jpnLanguage"
+        app:layout_constraintEnd_toEndOf="@+id/nameUserText"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/nameUserText"
+        app:layout_constraintTop_toBottomOf="@+id/nameUserText"
+        app:layout_constraintVertical_bias="0.328" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

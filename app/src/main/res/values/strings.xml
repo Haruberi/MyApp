@@ -58,6 +58,10 @@
     <string name="mainSignIn">Sign in here</string>
     <string name="mainSignUp">Sign up here</string>
 
+    <string name="jpnLangText">LANGUAGE 1</string>
+    <string name="chiLangText">LANGUAGE 2</string>
+    <string name="korLangText">LANGUAGE 3</string>
+
     <!--Level 1 Activity-->
     <string name="btnStart">START</string>
 
@@ -66,7 +70,7 @@
     <string name="lvl1More">READ MORE</string>
     <string name="quizAbout">About this quiz</string>
     <string name="quizTitle">QUIZ</string>
-    <string name="yourScore">Your score:</string>
+    <string name="yourScore">Your score: 0</string>
     <!--China Level Fragment-->
     <string name="chiQuizTitle">CHINESE QUIZ</string>
     <!--Korean Level Fragment-->

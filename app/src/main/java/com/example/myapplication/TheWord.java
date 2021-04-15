@@ -10,7 +10,6 @@ public class TheWord {
     private String option3;
     private int answerNr;
 
-
     public TheWord(){}
 
     public TheWord(String theWord, String wordSentence, String sentenceTranslation, String option1, String option2, String option3, int answerNr) {
