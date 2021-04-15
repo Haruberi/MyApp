@@ -13,8 +13,7 @@ public class KorActivity extends AppCompatActivity {
     private ViewPager korView;
     private TabLayout korLayout;
 
-    private LearnFragment korLearn;
-    //Level
+    private KorQuizFragment korQuiz;
     private HomeFragment korHome;
 
     private ViewPagerAdapter korVPAdapter;
@@ -30,13 +29,12 @@ public class KorActivity extends AppCompatActivity {
         korView=findViewById(R.id.korViewPager);
         korLayout=findViewById(R.id.korTabLayout);
 
-        korLearn=new LearnFragment();
-        //Level
+        korQuiz=new KorQuizFragment();
         korHome=new HomeFragment();
         korLayout.setupWithViewPager(korView);
 
         korVPAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
-        //level
+        korVPAdapter.addFragment(korQuiz,"QUIZ");
         korVPAdapter.addFragment(korHome,"HOME");
         korView.setAdapter(korVPAdapter);
 

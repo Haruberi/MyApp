@@ -60,8 +60,8 @@
 
         <TextView
             android:id="@+id/chiQuizTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="419dp"
+            android:layout_height="117dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/diplomata"
             android:gravity="center_horizontal"
@@ -73,7 +73,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.04" />
+            app:layout_constraintVertical_bias="0.018" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
