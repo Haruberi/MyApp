@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -17,6 +19,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -24,6 +27,11 @@ import java.util.Locale;
 public class QuizActivity extends AppCompatActivity {
 
     public static final String EXTRA_SCORE ="extraScore";
+
+    //nya variabler
+    private QuizDBHelper langDBHelper;
+    private SQLiteDatabase langDb;
+    //slutar här
 
     private TextToSpeech langTTS;
     private SeekBar speakSeek;
@@ -76,8 +84,23 @@ public class QuizActivity extends AppCompatActivity {
 
         textColorDefaultRb=rb1.getTextColors();
 
-        QuizDBHelper dbHelper=new QuizDBHelper(this);
-        theWordList=dbHelper.getAllWords();
+        //QuizDBHelper dbHelper=new QuizDBHelper(this);
+
+        //ny data för ny databas
+        langDBHelper =new QuizDBHelper(this);
+        try {
+            langDBHelper.upDateDataBase();
+        } catch (IOException langIOException){
+            throw new Error("UnableToUpdateDatabase");
+        }
+
+        try {
+            langDb=langDBHelper.getWritableDatabase();
+        } catch (SQLException langSQLException){
+            throw langSQLException;
+        }
+
+        theWordList=langDBHelper.getAllWords();
 
         wordCountTotal = theWordList.size();
         Collections.shuffle(theWordList);
@@ -99,6 +122,7 @@ public class QuizActivity extends AppCompatActivity {
 
         });
     }
+    //slutar här
 
     private void showNextWord(){
         rb1.setTextColor(textColorDefaultRb);
