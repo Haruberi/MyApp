@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".KorQuizActivity"></activity>
-        <activity android:name=".ChiQuizActivity" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".JpnQuizActivity" />
-        <activity android:name=".KorActivity" />
-        <activity android:name=".ChiActivity" />
-        <activity android:name=".JpnActivity" />
-        <activity android:name=".ForgotPassActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".QuizActivities.KorQuizActivity"></activity>
+        <activity android:name=".QuizActivities.ChiQuizActivity" />
+        <activity android:name=".QuizDatabase.QuizActivity" />
+        <activity android:name=".QuizActivities.JpnQuizActivity" />
+        <activity android:name=".LanguageActivities.KorActivity" />
+        <activity android:name=".LanguageActivities.ChiActivity" />
+        <activity android:name=".LanguageActivities.JpnActivity" />
+        <activity android:name=".Start.ForgotPassActivity" />
+        <activity android:name=".Start.SignUpActivity" />
+        <activity android:name=".Start.SignInActivity" />
+        <activity android:name=".Home.HomeActivity" />
+        <activity android:name=".Start.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

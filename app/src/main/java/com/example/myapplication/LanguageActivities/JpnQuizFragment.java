@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.LanguageActivities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.myapplication.QuizActivities.JpnQuizActivity;
+import com.example.myapplication.R;
 
 public class JpnQuizFragment extends Fragment {
 

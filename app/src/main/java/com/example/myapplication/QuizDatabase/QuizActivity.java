@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.QuizDatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -19,10 +18,12 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.R;
+import com.example.myapplication.TheWord;
+
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -84,20 +85,13 @@ public class QuizActivity extends AppCompatActivity {
 
         textColorDefaultRb=rb1.getTextColors();
 
-        //QuizDBHelper dbHelper=new QuizDBHelper(this);
-
-        //ny data för ny databas
-        langDBHelper =new QuizDBHelper(this);
+        QuizDBHelper quizDBHelper =new QuizDBHelper(this);
         try {
-            langDBHelper.upDateDataBase();
-        } catch (IOException langIOException){
-            throw new Error("UnableToUpdateDatabase");
+            quizDBHelper.createDataBase();
+            quizDBHelper.openDataBase();
         }
-
-        try {
-            langDb=langDBHelper.getWritableDatabase();
-        } catch (SQLException langSQLException){
-            throw langSQLException;
+        catch (IOException e){
+            e.printStackTrace();
         }
 
         theWordList=langDBHelper.getAllWords();
@@ -122,7 +116,6 @@ public class QuizActivity extends AppCompatActivity {
 
         });
     }
-    //slutar här
 
     private void showNextWord(){
         rb1.setTextColor(textColorDefaultRb);

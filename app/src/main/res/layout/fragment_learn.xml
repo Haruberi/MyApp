@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:background="#9577B3"
-    tools:context=".LearnFragment">
+    tools:context=".Home.LearnFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

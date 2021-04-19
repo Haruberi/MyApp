@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.QuizActivities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.myapplication.QuizDatabase.QuizActivity;
+import com.example.myapplication.R;
 
 public class JpnQuizActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_QUIZ=1;
@@ -39,7 +42,7 @@ public class JpnQuizActivity extends AppCompatActivity {
 
     //here open our second activity quizactivity
     private void startQuiz(){
-        Intent intent=new Intent(JpnQuizActivity.this,QuizActivity.class);
+        Intent intent=new Intent(JpnQuizActivity.this, QuizActivity.class);
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }
 

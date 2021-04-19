@@ -1,10 +1,13 @@
-package com.example.myapplication;
+package com.example.myapplication.LanguageActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.example.myapplication.Home.HomeFragment;
+import com.example.myapplication.R;
+import com.example.myapplication.ViewPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 

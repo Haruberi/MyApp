@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.LanguageActivities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.myapplication.QuizActivities.KorQuizActivity;
+import com.example.myapplication.R;
 
 
 public class KorQuizFragment extends Fragment {
@@ -34,7 +37,7 @@ public class KorQuizFragment extends Fragment {
         gotoKorQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in =new Intent(getActivity(),KorQuizActivity.class);
+                Intent in =new Intent(getActivity(), KorQuizActivity.class);
                 startActivity(in);
             }
         });

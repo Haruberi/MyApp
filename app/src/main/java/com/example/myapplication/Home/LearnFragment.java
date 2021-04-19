@@ -1,6 +1,5 @@
-package com.example.myapplication;
+package com.example.myapplication.Home;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,7 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+
+import com.example.myapplication.LanguageActivities.ChiActivity;
+import com.example.myapplication.LanguageActivities.JpnActivity;
+import com.example.myapplication.LanguageActivities.KorActivity;
+import com.example.myapplication.R;
 
 public class LearnFragment extends Fragment {
 
@@ -39,7 +42,7 @@ public class LearnFragment extends Fragment {
         gotoKor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent korIn=new Intent(getActivity(),KorActivity.class);
+                Intent korIn=new Intent(getActivity(), KorActivity.class);
                 startActivity(korIn);
             }
         });
@@ -49,7 +52,7 @@ public class LearnFragment extends Fragment {
         gotoChi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent chiIn=new Intent(getActivity(),ChiActivity.class);
+                Intent chiIn=new Intent(getActivity(), ChiActivity.class);
                 startActivity(chiIn);
             }
         });
@@ -59,7 +62,7 @@ public class LearnFragment extends Fragment {
         goToJpn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent japIn=new Intent(getActivity(),JpnActivity.class);
+                Intent japIn=new Intent(getActivity(), JpnActivity.class);
                 startActivity(japIn);
             }
         });

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="#76EF54"
     android:fillViewport="true"
-    tools:context=".FaqFragment"
+    tools:context=".BottomNavigation.FaqFragment"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout

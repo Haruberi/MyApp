@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Start;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.myapplication.Home.HomeActivity;
+import com.example.myapplication.LanguageDB;
+import com.example.myapplication.R;
 
 public class SignInActivity extends AppCompatActivity {
 
