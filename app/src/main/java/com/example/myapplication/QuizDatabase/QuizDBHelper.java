@@ -115,7 +115,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
 
     public void openDataBase() throws SQLException{
         String myPath=DB_PATH+DB_NAME;
-        langDataBase=SQLiteDatabase.openDatabase(myPath,null,SQLiteDatabase.OPEN_READWRITE);
+        langDataBase=SQLiteDatabase.openDatabase(myPath,null,SQLiteDatabase.OPEN_READONLY);
         System.out.println("success");
     }
     @Override

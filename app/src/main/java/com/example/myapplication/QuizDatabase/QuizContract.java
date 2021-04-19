@@ -9,7 +9,7 @@ public final class QuizContract implements BaseColumns {
 
     //ChiTable
     public static class ChiWordTable {
-        public static final String TABLE_NAME = "ChiQuizActivity";
+        public static final String TABLE_NAME = "ChiQuizWords";
 
         public static final String _ID = "ID";
         public static String COLUMN_WORD = "word";
@@ -26,7 +26,7 @@ public final class QuizContract implements BaseColumns {
     //JpnTable
     public static class JpnWordTable {
 
-        public static final String TABLE_NAME = "JpnQuizActivity";
+        public static final String TABLE_NAME = "JpnQuizWords";
         public static final String _ID = "ID";
         public static final String COLUMN_WORD = "word";
 
