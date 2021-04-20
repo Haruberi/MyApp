@@ -2,6 +2,7 @@ package com.example.myapplication.QuizDatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.database.SQLException;
@@ -30,8 +31,8 @@ public class QuizActivity extends AppCompatActivity {
     public static final String EXTRA_SCORE ="extraScore";
 
     //nya variabler
-    private QuizDBHelper langDBHelper;
     private SQLiteDatabase langDb;
+    private QuizDBHelper quizDBHelper;
     //slutar här
 
     private TextToSpeech langTTS;
@@ -85,7 +86,7 @@ public class QuizActivity extends AppCompatActivity {
 
         textColorDefaultRb=rb1.getTextColors();
 
-        QuizDBHelper quizDBHelper =new QuizDBHelper(this);
+        quizDBHelper = new QuizDBHelper(this);
         try {
             quizDBHelper.createDataBase();
             quizDBHelper.openDataBase();
@@ -94,7 +95,7 @@ public class QuizActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        theWordList=langDBHelper.getAllWords();
+        theWordList=quizDBHelper.getAllWords();
 
         wordCountTotal = theWordList.size();
         Collections.shuffle(theWordList);
@@ -127,6 +128,9 @@ public class QuizActivity extends AppCompatActivity {
             currWord = theWordList.get(wordCounter);
 
             textViewWord.setText(currWord.getTheWord());
+            textViewSentence.setText(currWord.getWordSentence());
+            textViewTranslation.setText(currWord.getSentenceTranslation());
+
             rb1.setText(currWord.getOption1());
             rb2.setText(currWord.getOption2());
             rb3.setText(currWord.getOption3());

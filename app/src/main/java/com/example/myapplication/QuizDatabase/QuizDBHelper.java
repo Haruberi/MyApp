@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
 
@@ -21,7 +22,7 @@ import java.util.List;
 public class QuizDBHelper extends SQLiteOpenHelper {
 
     //skapar en DP_PATH för en empty database att skapas i
-    private static String DB_PATH="/data/data/myapplication/databases";
+    private static String DB_PATH="";
 
     private static String DB_NAME="LanguageAppQuiz.db";
 
@@ -35,6 +36,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     public QuizDBHelper(Context context){
         super(context,DB_NAME,null,1);
         langContext=context;
+        DB_PATH=context.getApplicationInfo().dataDir;
     }
 
     //createDataBase() - Create empty database on
@@ -47,7 +49,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
         } else {
             //By calling this method, an ampty database will be
             //created into the default system path of myapplication so
-            // i am gonna be able to overwrite that database with mine database
+            // i am gonna be able to overwrite that database with my own database
 
 
             this.getReadableDatabase();
@@ -66,10 +68,10 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     private boolean checkDataBase() {
         SQLiteDatabase checkDB = null;
         try {
-            String myPath = DB_PATH + DB_NAME;
+            String myPath = DB_PATH + "/" + DB_NAME;
             checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
             System.out.println("checkDB: :" + checkDB);
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("&amp; &amp;" + e.toString());
         }
         if (checkDB != null) {
@@ -95,8 +97,8 @@ public class QuizDBHelper extends SQLiteOpenHelper {
 
     private void copyDataBase() throws IOException{
         System.out.println("working 1");
-        InputStream myInput=langContext.getAssets().open(DB_NAME);
-        String outFileName=DB_PATH+DB_NAME;
+        InputStream myInput=langContext.getAssets().open("databases/" + DB_NAME);
+        String outFileName=DB_PATH + "/" + DB_NAME;
         OutputStream myOutput=new FileOutputStream(outFileName);
         byte[] buffer=new byte[1024];
         int length;
@@ -114,7 +116,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     //openDataBase - open the database
 
     public void openDataBase() throws SQLException{
-        String myPath=DB_PATH+DB_NAME;
+        String myPath=DB_PATH+ "/" + DB_NAME;
         langDataBase=SQLiteDatabase.openDatabase(myPath,null,SQLiteDatabase.OPEN_READONLY);
         System.out.println("success");
     }
@@ -133,6 +135,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
 
     }
 
+    //getAllWords - Får alla ord till quiz, anropas i QuizActivity
     public List<TheWord> getAllWords(){
         List<TheWord> theWordList =new ArrayList<>();
         langDataBase=getReadableDatabase();
@@ -143,6 +146,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
                 TheWord theWord=new TheWord();
                 theWord.setTheWord(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_WORD)));
                 theWord.setWordSentence(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_SENTENCE)));
+                theWord.setSentenceTranslation(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_SENTENCE_TRANSLATION)));
                 theWord.setOption1(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_OPTION1)));
                 theWord.setOption2(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_OPTION2)));
                 theWord.setOption3(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_OPTION3)));
