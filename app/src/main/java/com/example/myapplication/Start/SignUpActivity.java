@@ -29,7 +29,6 @@ public class SignUpActivity extends AppCompatActivity {
 
         languageDB = new LanguageDB(this);
 
-        //Navigate to SignInActivity
         TextView alrReg = findViewById(R.id.alreadyRegistered);
         alrReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,8 +37,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
         });
     }
-    //Logic to call insertData of LanguageDB class
-    public void signUp(View v){
+    public void signUpPageButton(View v){
         String name=signUpName.getText().toString();
         String email=signUpEmail.getText().toString();
         String username=signUpUser.getText().toString();
@@ -48,14 +46,11 @@ public class SignUpActivity extends AppCompatActivity {
 
         if (result) {
             Toast.makeText(SignUpActivity.this,"Sign in to continue!",Toast.LENGTH_LONG).show();
-            //finish
             signUpName.setText("");
             signUpEmail.setText("");
             signUpUser.setText("");
             signUpPass.setText("");
 
-            //Navigate to HomeActivity after user registered - *NOT HAPPENING*
-            //startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
             Intent i=new Intent(SignUpActivity.this,SignInActivity.class);
             startActivity(i);
         }

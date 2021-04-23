@@ -40,8 +40,8 @@ public class HomeActivity extends AppCompatActivity {
         tbLayout.setupWithViewPager(viewPager);
 
         viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager(),0);
-        viewPagerAdapter.addFragment(learnFrag,"LEARN");
         viewPagerAdapter.addFragment(homeFrag,"HOME");
+        viewPagerAdapter.addFragment(learnFrag,"LEARN");
         viewPager.setAdapter(viewPagerAdapter);
     }
 }

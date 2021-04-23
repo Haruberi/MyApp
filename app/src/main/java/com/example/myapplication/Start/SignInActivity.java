@@ -3,7 +3,9 @@ package com.example.myapplication.Start;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +40,6 @@ public class SignInActivity extends AppCompatActivity {
         });
     }
 
-    //logic for sign in
     public void signInPageButton(View v) {
         String username = signInUser.getText().toString();
         String pass = signInPass.getText().toString();
@@ -49,8 +50,8 @@ public class SignInActivity extends AppCompatActivity {
             Toast.makeText(SignInActivity.this, "Invalid credentials for " + username, Toast.LENGTH_LONG).show();
             signInUser.setText("");
             signInPass.setText("");
-        } else {
-            //name and password from languageDB
+        }
+        else {
             String name = c.getString(0);
             String password = c.getString(1);
 
@@ -58,7 +59,8 @@ public class SignInActivity extends AppCompatActivity {
                 Intent i = new Intent(SignInActivity.this, HomeActivity.class);
                 i.putExtra("name", name);
                 startActivity(i);
-            } else {
+            }
+            else {
                 Toast.makeText(SignInActivity.this, "Invalid credentials for user " + username, Toast.LENGTH_LONG).show();
             }
             signInUser.setText("");

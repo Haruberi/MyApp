@@ -9,10 +9,10 @@ import android.widget.Toast;
 
 public class LanguageDB extends SQLiteOpenHelper {
 
-    //call superclass by passing db name
     Context c;
     public static String DBNAME="LanguageDB";
     public static int VERSION=1;
+
     public LanguageDB(Context context){
         super(context,DBNAME,null,VERSION);
         c=context;
@@ -23,7 +23,6 @@ public class LanguageDB extends SQLiteOpenHelper {
             String qry="create table LanguageUserTab(Name TEXT, Email TEXT, Username TEXT, Password TEXT)";
             db.execSQL(qry);
             Toast.makeText(c, "Table created successfully ", Toast.LENGTH_LONG).show();
-
         } catch(Exception e) {
             Log.e("LanguageDB","Table creation error",e);
         }
@@ -33,13 +32,12 @@ public class LanguageDB extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-    //Upgrading database - Insert into database table
     public boolean insertData(String name, String email, String username, String password) {
         try {
             String qry = "insert into LanguageUserTab values('" + name + "', '" + email + "','" + username + "', '" + password + "')";
             SQLiteDatabase db = getWritableDatabase();
             db.execSQL(qry);
-            Toast.makeText(c, name + "Glad you joined, " + name + "\n \t You are now an official member!", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, "Glad you joined, " + name + "\n You are now an official member!", Toast.LENGTH_LONG).show();
             return true;
         } catch (Exception e) {
             Log.e("LanguageDB", "Insertion of record failed", e);

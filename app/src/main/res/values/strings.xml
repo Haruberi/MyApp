@@ -1,5 +1,9 @@
 <resources>
     <string name="loremText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="jpnQuizText">Welcome to the quiz to learn Japanese❗ In each round of the quiz there will be a total of 5 questions. When the quiz is finished you will see your score right over here You can do the test as many times as you want!! 頑張ってください(Ganbattekudasai) = Good luck! 😁 🍣</string>
+    <string name="chiQuizText">Welcome to the quiz to learn Chinese❗ In each round of the quiz there will be a total of 5 words. When the quiz is finished you will see your score right over here! You can do the test as many times you want!! 加油 (Jiā yóu) = Good luck! 😁 🍜 </string>
+    <string name="korQuizText">Welcome to the quiz to learn Korean❗ In each round of the quiz there will be a total of 5 words. When the quiz is finished you will see your score right over here! You can do the test as many times you want!! 잘보세요 (Jal boseyo) = Good luck! 😁 🍚 </string>
+
 
     <string name="app_name">Language app</string>
     <string name="title_activity_sign_in">SignInActivity</string>
@@ -70,7 +74,7 @@
     <string name="lvl1More">READ MORE</string>
     <string name="quizAbout">About this quiz</string>
     <string name="quizTitle">QUIZ</string>
-    <string name="yourScore">Your score: 0</string>
+    <string name="yourScore">Your current score: 0</string>
     <!--China Level Fragment-->
     <string name="chiQuizTitle">CHINESE QUIZ</string>
     <!--Korean Level Fragment-->
@@ -106,23 +110,14 @@
     <string name="chiWord3">d</string>
     <string name="chiWord4">d</string>
     <string name="chiWord5">d</string>
-    <!--Sentence-->
-    <string name="chiWord1Sentence"></string>
-    <string name="chiWord2Sentence"></string>
-    <string name="chiWord3Sentence"></string>
-    <string name="chiWord4Sentence"></string>
-    <string name="chiWord5Sentence"></string>
-    <!--Translated sentence-->
-    <string name="chiWord1Tra"></string>
-    <string name="chiWord2Tra"></string>
-    <string name="chiWord3Tra"></string>
-    <string name="chiWord4Tra"></string>
-    <string name="chiWord5Tra"></string>
 
 
     <!--fragment home-->
     <string name="nameText">NAME</string>
     <string name="welcome">Welcome</string>
+    <string name="JpnQuizAgain">START OVER JPN QUIZ</string>
+    <string name="ChiQuizAgain">START OVER CHI QUIZ</string>
+    <string name="KorQuizAgain">START OVER KOR QUIZ</string>
     <string name="contentDesImage"> </string>
 
     <!--fragment learn-->

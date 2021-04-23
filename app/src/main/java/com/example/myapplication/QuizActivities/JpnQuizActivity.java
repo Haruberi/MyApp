@@ -14,66 +14,74 @@ import com.example.myapplication.QuizDatabase.QuizActivity;
 import com.example.myapplication.R;
 
 public class JpnQuizActivity extends AppCompatActivity {
-    private static final int REQUEST_CODE_QUIZ=1;
-
-    //To show score - flytta detta sedan till HomeFragment, men gör först här
-    public static final String SHARED_PREFS="sharedPrefs";
-    public static final String KEY_HIGHSCORE="keyHighscore";
-
-    private TextView textViewHighscore;
-    private int highscore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jpn_quiz);
 
-        textViewHighscore=findViewById(R.id.textViewHighscore);
-        loadHighscore();
-
-        Button buttonStart=findViewById(R.id.jpnBtnStart);
-        buttonStart.setOnClickListener(new View.OnClickListener() {
+        Button btnStartQuiz = findViewById(R.id.jpnBtnStart);
+        btnStartQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startQuiz();
+                startJpnQuiz();
             }
         });
     }
 
-    //here open our second activity quizactivity
-    private void startQuiz(){
-        Intent intent=new Intent(JpnQuizActivity.this, QuizActivity.class);
-        startActivityForResult(intent, REQUEST_CODE_QUIZ);
-    }
-
-    //för att visa score
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode==REQUEST_CODE_QUIZ){
-            if (resultCode == RESULT_OK){
-                int score=data.getIntExtra(QuizActivity.EXTRA_SCORE,0);
-                if (score>highscore){
-                    updateHighscore(score);
-                }
-            }
-        }
-    }
-
-    private void loadHighscore(){
-        SharedPreferences prefs=getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        highscore=prefs.getInt(KEY_HIGHSCORE,0);
-        textViewHighscore.setText("Your highscore" + highscore);
-    }
-
-    private void updateHighscore(int highscoreNew){
-        highscore=highscoreNew;
-        textViewHighscore.setText("Your highscore" + highscore);
-
-        SharedPreferences prefs=getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        SharedPreferences.Editor editor=prefs.edit();
-        editor.putInt(KEY_HIGHSCORE,highscore);
-        editor.apply();
+    private void startJpnQuiz(){
+        Intent jpnIntent=new Intent(JpnQuizActivity.this,QuizActivity.class);
+        startActivity(jpnIntent);
     }
 }
+
+        //textViewHighscore=findViewById(R.id.textViewHighscore);
+        //        loadHighscore();
+        //
+        //        Button buttonStart=findViewById(R.id.jpnBtnStart);
+        //        buttonStart.setOnClickListener(new View.OnClickListener() {
+        //            @Override
+        //            public void onClick(View v) {
+        //                startQuiz();
+        //            }
+        //        });
+        //    }
+        //
+        //    //Navigate to QuizActivity
+        //    private void startQuiz(){
+        //        Intent intent=new Intent(JpnQuizActivity.this, QuizActivity.class);
+        //        startActivityForResult(intent, REQUEST_CODE_QUIZ);
+        //    }
+        //
+        //    //för att visa score
+        //    @Override
+        //    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        //        super.onActivityResult(requestCode, resultCode, data);
+        //
+        //        if (requestCode==REQUEST_CODE_QUIZ){
+        //            if (resultCode == RESULT_OK){
+        //                int score=data.getIntExtra(QuizActivity.EXTRA_SCORE,0);
+        //                if (score>highscore){
+        //                    updateHighscore(score);
+        //                }
+        //            }
+        //        }
+        //    }
+        //
+        //    private void loadHighscore(){
+        //        SharedPreferences prefs=getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        //        highscore=prefs.getInt(KEY_HIGHSCORE,0);
+        //        textViewHighscore.setText("Your highscore" + highscore);
+        //    }
+        //
+        //    private void updateHighscore(int highscoreNew){
+        //        highscore=highscoreNew;
+        //        textViewHighscore.setText("Your highscore" + highscore);
+        //
+        //        SharedPreferences prefs=getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
+        //        SharedPreferences.Editor editor=prefs.edit();
+        //        editor.putInt(KEY_HIGHSCORE,highscore);
+        //        editor.apply();
+        //    }
+        //}
+

@@ -35,8 +35,7 @@ public class JpnQuizFragment extends Fragment {
         setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_jpn_quiz, container, false);
 
-        //Navigate to JpnQuizActivity(Quiz för japanska)
-
+        //Navigate to JpnQuizActivity
         Button goToJpnQuiz = (Button) view.findViewById(R.id.gotoJpnQuiz);
         goToJpnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override

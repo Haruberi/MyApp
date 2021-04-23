@@ -22,7 +22,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textWelcome"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textWelcome" />
+        app:layout_constraintStart_toStartOf="@+id/textWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/textWelcome"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textWelcome"
@@ -40,59 +42,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.163" />
 
-    <TextView
-        android:id="@+id/jpnLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:background="@color/white"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/jpnLangText"
-        android:textAllCaps="true"
-        android:textColor="@color/jpnColor"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameUserText"
-        app:layout_constraintVertical_bias="0.181" />
-
-    <TextView
-        android:id="@+id/korLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:background="@color/white"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/korLangText"
-        android:textAllCaps="true"
-        android:textColor="@color/jpnColor"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/chiLanguage"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/chiLanguage"
-        app:layout_constraintTop_toBottomOf="@+id/chiLanguage"
-        app:layout_constraintVertical_bias="0.222" />
-
-    <TextView
-        android:id="@+id/chiLanguage"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:background="@color/white"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="@string/chiLangText"
-        android:textAllCaps="true"
-        android:textColor="@color/jpnColor"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/jpnLanguage"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/jpnLanguage"
-        app:layout_constraintTop_toBottomOf="@+id/jpnLanguage"
-        app:layout_constraintVertical_bias="0.141" />
 
     <TextView
         android:id="@+id/homeHighscore"
@@ -103,12 +52,64 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/jpnLanguage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/nameUserText"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="@+id/nameUserText"
         app:layout_constraintTop_toBottomOf="@+id/nameUserText"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/startJpnQuizAgain"
+        android:layout_width="336dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="casual"
+        android:text="@string/JpnQuizAgain"
+        android:textColor="@color/jpnColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/homeHighscore"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/homeHighscore"
+        app:layout_constraintTop_toBottomOf="@+id/homeHighscore"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/startChiQuizAgain"
+        android:layout_width="336dp"
+        android:layout_height="59dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="casual"
+        android:text="@string/ChiQuizAgain"
+        android:textColor="@color/chiColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/startJpnQuizAgain"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/startJpnQuizAgain"
+        app:layout_constraintTop_toBottomOf="@+id/startJpnQuizAgain"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/startKorQuizAgain"
+        android:layout_width="336dp"
+        android:layout_height="59dp"
+        android:background="@drawable/input_bg"
+        android:fontFamily="casual"
+        android:text="@string/KorQuizAgain"
+        android:textColor="@color/korColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/startChiQuizAgain"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/startChiQuizAgain"
+        app:layout_constraintTop_toBottomOf="@+id/startChiQuizAgain"
+        app:layout_constraintVertical_bias="0.127" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
