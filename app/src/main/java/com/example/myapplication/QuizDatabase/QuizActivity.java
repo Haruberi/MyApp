@@ -38,9 +38,17 @@ public class QuizActivity extends AppCompatActivity {
         private RadioButton rb1;
         private RadioButton rb2;
         private RadioButton rb3;
-
+        private ColorStateList textColorDefaultForRb;
         private Button buttonNext;
 
+        private int wordCounter;
+        private int wordCountTotal;
+        private TheWord currWord;
+        private TheWord currSentence;
+        private TheWord currTranslation;
+
+        private int score;
+        private boolean answered;
         private List<TheWord> theWordList;
 
     protected void onCreate(Bundle savedInstanceState){
@@ -59,9 +67,46 @@ public class QuizActivity extends AppCompatActivity {
         rb3=findViewById(R.id.radioBtn3);
         buttonNext=findViewById(R.id.btnNext);
 
+        textColorDefaultForRb=rb1.getTextColors();
+
         QuizDBHelper jpnDBHelper=new QuizDBHelper(this);
         theWordList=jpnDBHelper.getAllWords();
+        wordCountTotal=theWordList.size();
+        //shuffle - få ord i randow ordning
+        Collections.shuffle(theWordList);
 
+        showNextWord();
+    }
+
+    private void showNextWord(){
+        rb1.setTextColor(textColorDefaultForRb);
+        rb2.setTextColor(textColorDefaultForRb);
+        rb3.setTextColor(textColorDefaultForRb);
+        rbGroup.clearCheck();
+
+        //if there are any words/sentence/translations left, we can show the next word
+        if (wordCounter<wordCountTotal){
+            currWord=theWordList.get(wordCounter);
+            //currSentence=theWordList.get(wordCounter);
+            //currTranslation=theWordList.get(wordCounter);
+
+            textViewWord.setText(currWord.getTheWord());
+            textViewSentence.setText(currWord.getWordSentence());
+            textViewTranslation.setText(currWord.getSentenceTranslation());
+            rb1.setText(currWord.getOption1());
+            rb2.setText(currWord.getOption2());
+            rb3.setText(currWord.getOption3());
+
+            wordCounter++;
+            textViewWordCount.setText("Word: " + wordCounter + "/" + wordCountTotal);
+            answered=false;
+            buttonNext.setText("Check answer");
+        } else {
+            finishQuiz();
+        }
+    }
+    private void finishQuiz(){
+        finish();
     }
 }
 
