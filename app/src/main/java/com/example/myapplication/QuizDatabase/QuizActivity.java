@@ -26,10 +26,11 @@ import java.util.List;
 
 public class QuizActivity extends AppCompatActivity {
 
+    public static final String SHOW_SCORE_AGAIN="showScoreAgain";
         private TextView textViewWord;
 
         private TextView textViewSentence;
-        private TextView textViewTranslation;
+        //private TextView textViewTranslation;
 
         private TextView textViewScore;
         private TextView textViewWordCount;
@@ -49,16 +50,18 @@ public class QuizActivity extends AppCompatActivity {
 
         private int score;
         private boolean answered;
+
+        private long backPressedTime;
         private List<TheWord> theWordList;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        //jpn quiz
+        //*****jpn quiz******
         textViewWord=findViewById(R.id.wordId);
         textViewSentence=findViewById(R.id.wordSentence);
-        textViewTranslation=findViewById(R.id.translationSentence);
+        //textViewTranslation=findViewById(R.id.translationSentence);
         textViewScore=findViewById(R.id.scoreId);
         textViewWordCount=findViewById(R.id.wordCountId);
         rbGroup=findViewById(R.id.radioGroupId);
@@ -76,6 +79,21 @@ public class QuizActivity extends AppCompatActivity {
         Collections.shuffle(theWordList);
 
         showNextWord();
+
+        buttonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!answered) {
+                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
+                        checkAnswer();
+                    } else {
+                        Toast.makeText(QuizActivity.this,"Try again",Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    showNextWord();
+                }
+            }
+        });
     }
 
     private void showNextWord(){
@@ -92,7 +110,7 @@ public class QuizActivity extends AppCompatActivity {
 
             textViewWord.setText(currWord.getTheWord());
             textViewSentence.setText(currWord.getWordSentence());
-            textViewTranslation.setText(currWord.getSentenceTranslation());
+            //textViewTranslation.setText(currWord.getSentenceTranslation());
             rb1.setText(currWord.getOption1());
             rb2.setText(currWord.getOption2());
             rb3.setText(currWord.getOption3());
@@ -105,171 +123,59 @@ public class QuizActivity extends AppCompatActivity {
             finishQuiz();
         }
     }
+
+    private void checkAnswer(){
+        answered=true;
+
+        RadioButton rbSel=findViewById(rbGroup.getCheckedRadioButtonId());
+        int answerNr=rbGroup.indexOfChild(rbSel) + 1;
+
+        if (answerNr==currWord.getAnswerNr()){
+            score++;
+            textViewScore.setText("Score: " + score);
+        }
+        showSolution();
+    }
+    private void showSolution(){
+        rb1.setTextColor(Color.WHITE);
+        rb2.setTextColor(Color.WHITE);
+        rb3.setTextColor(Color.WHITE);
+
+        switch (currWord.getAnswerNr()){
+            case 1:
+                rb1.setTextColor(Color.BLACK);
+                textViewWord.setText("A is ✔");
+                break;
+            case 2:
+                rb2.setTextColor(Color.BLACK);
+                textViewWord.setText("B is ✔");
+                break;
+            case 3:
+                rb3.setTextColor(Color.BLACK);
+                textViewWord.setText("C i ✔");
+                break;
+        }
+
+        if (wordCounter<wordCountTotal){
+            buttonNext.setText("Next");
+        } else {
+            buttonNext.setText("Finish!");
+        }
+    }
     private void finishQuiz(){
+        Intent resultIntent=new Intent();
+        resultIntent.putExtra(SHOW_SCORE_AGAIN, score);
+        setResult(RESULT_OK,resultIntent);
         finish();
     }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime+2000>System.currentTimeMillis()){
+            finishQuiz();
+        } else {
+            Toast.makeText(this,"Press back again to finish", Toast.LENGTH_SHORT);
+        }
+        backPressedTime=System.currentTimeMillis();
+    }
 }
-
-    //public static final String EXTRA_SCORE ="extraScore";
-    //
-    //    //nya variabler
-    //    private SQLiteDatabase langDb;
-    //    private QuizDBHelper quizDBHelper;
-    //    //slutar här
-    //
-    //    private TextToSpeech langTTS;
-    //    private SeekBar speakSeek;
-    //    private ImageButton listenBtn;
-    //
-    //
-
-    //
-    //    private ColorStateList textColorDefaultRb;
-    //
-    //    private List<TheWord> theWordList;
-    //    private int wordCounter;
-    //    private int wordCountTotal;
-    //    private TheWord currWord;
-    //
-    //
-    //    private int score;
-    //    private boolean answered;
-    //
-    //    private long backPressedTime;
-    //
-    //    @Override
-    //    protected void onCreate(Bundle savedInstanceState) {
-    //        super.onCreate(savedInstanceState);
-    //        setContentView(R.layout.activity_quiz);
-    //
-    //        textViewWord=findViewById(R.id.wordId);
-    //        textViewSentence=findViewById(R.id.wordSentence);
-    //        textViewTranslation=findViewById(R.id.translationSentence);
-    //        textViewScore=findViewById(R.id.scoreId);
-    //        textViewWordCount=findViewById(R.id.wordCountId);
-    //        rbGroup=findViewById(R.id.radioGroupId);
-    //        rb1=findViewById(R.id.radioBtn1);
-    //        rb2=findViewById(R.id.radioBtn2);
-    //        rb3=findViewById(R.id.radioBtn3);
-    //        buttonNext=findViewById(R.id.btnNext);
-    //
-    //        textColorDefaultRb=rb1.getTextColors();
-    //
-    //
-    //        quizDBHelper = new QuizDBHelper(this);
-    //        try {
-    //            quizDBHelper.createDataBase();
-    //            quizDBHelper.openDataBase();
-    //        }
-    //        catch (IOException e){
-    //            e.printStackTrace();
-    //        }
-    //
-    //        theWordList=quizDBHelper.getAllWords();
-    //
-    //        wordCountTotal = theWordList.size();
-    //        Collections.shuffle(theWordList);
-    //
-    //        showNextWord();
-    //        buttonNext.setOnClickListener(new View.OnClickListener() {
-    //            @Override
-    //            public void onClick(View v) {
-    //                if (!answered){
-    //                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
-    //                        checkAnswer();
-    //                    } else {
-    //                        Toast.makeText(QuizActivity.this,"Please select an answer", Toast.LENGTH_SHORT).show();
-    //                    }
-    //                } else {
-    //                    showNextWord();
-    //                }
-    //            }
-    //
-    //        });
-    //    }
-    //
-    //    private void showNextWord(){
-    //        rb1.setTextColor(textColorDefaultRb);
-    //        rb2.setTextColor(textColorDefaultRb);
-    //        rb3.setTextColor(textColorDefaultRb);
-    //        rbGroup.clearCheck();
-    //
-    //        if (wordCounter < wordCountTotal){
-    //            currWord = theWordList.get(wordCounter);
-    //
-    //            textViewWord.setText(currWord.getTheWord());
-    //            textViewSentence.setText(currWord.getWordSentence());
-    //            textViewTranslation.setText(currWord.getSentenceTranslation());
-    //
-    //            rb1.setText(currWord.getOption1());
-    //            rb2.setText(currWord.getOption2());
-    //            rb3.setText(currWord.getOption3());
-    //
-    //            wordCounter++;
-    //            textViewWordCount.setText("Word: " + wordCounter + "/" + wordCountTotal);
-    //            answered=false;
-    //            buttonNext.setText("Confirm");
-    //        } else {
-    //            finishQuiz();
-    //        }
-    //    }
-    //
-    //    private void checkAnswer(){
-    //        answered=true;
-    //
-    //        RadioButton rbSelected=findViewById(rbGroup.getCheckedRadioButtonId());
-    //        int answerNr=rbGroup.indexOfChild(rbSelected) + 1;
-    //
-    //        if (answerNr==currWord.getAnswerNr()){
-    //            score++;
-    //            textViewScore.setText("Score " + score);
-    //        }
-    //
-    //        showSolution();
-    //    }
-    //
-    //    private void showSolution(){
-    //        rb1.setTextColor(Color.BLACK);
-    //        rb2.setTextColor(Color.BLACK);
-    //        rb3.setTextColor(Color.BLACK);
-    //
-    //        switch (currWord.getAnswerNr()){
-    //            case 1:
-    //                rb1.setTextColor(Color.GREEN);
-    //                textViewWord.setText("A is correct!");
-    //                break;
-    //            case 2:
-    //                rb2.setTextColor(Color.GREEN);
-    //                textViewWord.setText("B is correct!");
-    //                break;
-    //            case 3:
-    //                rb3.setTextColor(Color.GREEN);
-    //                textViewWord.setText("C is correct!");
-    //                break;
-    //        }
-    //
-    //        if (wordCounter < wordCountTotal){
-    //            buttonNext.setText("NEXT");
-    //        } else {
-    //            buttonNext.setText("FINISH");
-    //        }
-    //
-    //    }
-    //    private void finishQuiz(){
-    //        Intent resultIntent=new Intent();
-    //        resultIntent.putExtra(EXTRA_SCORE,score);
-    //        setResult(RESULT_OK, resultIntent);
-    //        finish();
-    //    }
-    //
-    //    @Override
-    //    public void onBackPressed() {
-    //        if (backPressedTime+2000>System.currentTimeMillis()){
-    //            finishQuiz();
-    //        } else {
-    //            Toast.makeText(this,"Press back again to exit", Toast.LENGTH_SHORT).show();
-    //        }
-    //        backPressedTime=System.currentTimeMillis();
-    //    }
-    //}
-

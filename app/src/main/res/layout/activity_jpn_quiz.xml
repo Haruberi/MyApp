@@ -66,7 +66,7 @@
         app:menu="@menu/bottom_navigation_menu" />
 
     <TextView
-        android:id="@+id/textViewHighscore"
+        android:id="@+id/jpntextViewHighscoreId"
         android:layout_width="171dp"
         android:layout_height="56dp"
         android:fontFamily="sans-serif-smallcaps"

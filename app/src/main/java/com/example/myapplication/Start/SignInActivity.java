@@ -8,14 +8,20 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.Home.HomeActivity;
 import com.example.myapplication.LanguageDB;
 import com.example.myapplication.R;
+
+import java.util.Locale;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -30,7 +36,6 @@ public class SignInActivity extends AppCompatActivity {
         signInPass = (EditText) findViewById(R.id.signInPagePass);
         languageDB = new LanguageDB(this);
 
-        //Navigate to Forgot Password page
         TextView forgotPasswordLink = findViewById(R.id.forgotPassword);
         forgotPasswordLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +44,7 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
     }
+
 
     public void signInPageButton(View v) {
         String username = signInUser.getText().toString();

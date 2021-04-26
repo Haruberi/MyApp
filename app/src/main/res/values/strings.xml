@@ -71,7 +71,7 @@
 
     <!--Japan Level Fragment-->
     <string name="jpnQuizTitle">JAPANESE QUIZ</string>
-    <string name="lvl1More">READ MORE</string>
+    <string name="lvl1More">READ MORE ABOUT THIS QUIZ</string>
     <string name="quizAbout">About this quiz</string>
     <string name="quizTitle">QUIZ</string>
     <string name="yourScore">Your current score: 0</string>

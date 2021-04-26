@@ -120,29 +120,30 @@
 
     <TextView
         android:id="@+id/wordSentence"
-        android:layout_width="402dp"
-        android:layout_height="78dp"
+        android:layout_width="410dp"
+        android:layout_height="135dp"
         android:text="@string/wordSentence"
         android:textColor="@color/jpnColor"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wordId"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.023" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/translationSentence"
-        android:layout_width="403dp"
-        android:layout_height="79dp"
+        android:layout_width="383dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="24dp"
         android:text="@string/wordTranslation"
-        android:textSize="14sp"
+        android:textSize="24sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/radioGroupId"
         app:layout_constraintEnd_toEndOf="@+id/wordSentence"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/wordSentence"
         app:layout_constraintTop_toBottomOf="@+id/wordSentence"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintVertical_bias="0.647" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
