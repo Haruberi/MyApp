@@ -23,10 +23,15 @@ import com.example.myapplication.TheWord;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
 
     public static final String SHOW_SCORE_AGAIN="showScoreAgain";
+    //speak text
+    private Button listenToWordBtn;
+    TextToSpeech mTTS;
+    //
         private TextView textViewWord;
 
         private TextView textViewSentence;
@@ -69,6 +74,33 @@ public class QuizActivity extends AppCompatActivity {
         rb2=findViewById(R.id.radioBtn2);
         rb3=findViewById(R.id.radioBtn3);
         buttonNext=findViewById(R.id.btnNext);
+
+        //textToSpeech
+        listenToWordBtn=findViewById(R.id.listenId);
+         mTTS=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+             @Override
+             public void onInit(int status) {
+                 if (status!=TextToSpeech.ERROR){
+                     mTTS.setLanguage(Locale.JAPANESE);
+                 }
+                 else {
+                     Toast.makeText(QuizActivity.this,"Error",Toast.LENGTH_SHORT).show();
+                 }
+             }
+         });
+
+         listenToWordBtn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 String listenToWord=textViewWord.getText().toString().trim();
+                 if (listenToWord.equals(textViewWord)){
+                     Toast.makeText(QuizActivity.this,listenToWord,Toast.LENGTH_SHORT).show();
+                     mTTS.speak(listenToWord,TextToSpeech.QUEUE_FLUSH,null);
+                 } else{
+                     Toast.makeText(QuizActivity.this,"Not working",Toast.LENGTH_SHORT).show();
+                 }
+             }
+         });
 
         textColorDefaultForRb=rb1.getTextColors();
 
