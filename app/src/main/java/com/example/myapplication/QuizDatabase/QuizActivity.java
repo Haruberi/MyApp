@@ -27,99 +27,91 @@ import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
 
-    public static final String SHOW_SCORE_AGAIN="showScoreAgain";
-    //speak text
-    private Button listenToWordBtn;
-    TextToSpeech mTTS;
-    //
-        private TextView textViewWord;
+    public static final String SHOW_SCORE_AGAIN = "showScoreAgain";
 
-        private TextView textViewSentence;
-        //private TextView textViewTranslation;
+    private TextView textViewWord;
+    Button listenBtn;
+    TextToSpeech textToSpeech;
 
-        private TextView textViewScore;
-        private TextView textViewWordCount;
+    private TextView textViewSentence;
+    //private TextView textViewTranslation;
 
-        private RadioGroup rbGroup;
-        private RadioButton rb1;
-        private RadioButton rb2;
-        private RadioButton rb3;
-        private ColorStateList textColorDefaultForRb;
-        private Button buttonNext;
+    private TextView textViewScore;
+    private TextView textViewWordCount;
 
-        private int wordCounter;
-        private int wordCountTotal;
-        private TheWord currWord;
-        private TheWord currSentence;
-        private TheWord currTranslation;
+    private RadioGroup rbGroup;
+    private RadioButton rb1;
+    private RadioButton rb2;
+    private RadioButton rb3;
+    private ColorStateList textColorDefaultForRb;
+    private Button buttonNext;
 
-        private int score;
-        private boolean answered;
+    private int wordCounter;
+    private int wordCountTotal;
+    private TheWord currWord;
+    private TheWord currSentence;
+    private TheWord currTranslation;
 
-        private long backPressedTime;
-        private List<TheWord> theWordList;
+    private int score;
+    private boolean answered;
 
-    protected void onCreate(Bundle savedInstanceState){
+    private long backPressedTime;
+    private List<TheWord> theWordList;
+
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        //tts
+        listenBtn=findViewById(R.id.listenId);
+        textToSpeech=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status!=TextToSpeech.ERROR){
+                    textToSpeech.setLanguage(Locale.JAPANESE); //japanese
+                }
+            }
+        });
+
+        listenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textToSpeech.speak(textViewWord.getText().toString(),TextToSpeech.QUEUE_FLUSH,null);
+            }
+        });
+
         //*****jpn quiz******
-        textViewWord=findViewById(R.id.wordId);
-        textViewSentence=findViewById(R.id.wordSentence);
+        textViewWord = findViewById(R.id.wordId);
+        textViewSentence = findViewById(R.id.wordSentence);
         //textViewTranslation=findViewById(R.id.translationSentence);
-        textViewScore=findViewById(R.id.scoreId);
-        textViewWordCount=findViewById(R.id.wordCountId);
-        rbGroup=findViewById(R.id.radioGroupId);
-        rb1=findViewById(R.id.radioBtn1);
-        rb2=findViewById(R.id.radioBtn2);
-        rb3=findViewById(R.id.radioBtn3);
-        buttonNext=findViewById(R.id.btnNext);
+        textViewScore = findViewById(R.id.scoreId);
+        textViewWordCount = findViewById(R.id.wordCountId);
+        rbGroup = findViewById(R.id.radioGroupId);
+        rb1 = findViewById(R.id.radioBtn1);
+        rb2 = findViewById(R.id.radioBtn2);
+        rb3 = findViewById(R.id.radioBtn3);
+        buttonNext = findViewById(R.id.btnNext);
 
-        //textToSpeech
-        listenToWordBtn=findViewById(R.id.listenId);
-         mTTS=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-             @Override
-             public void onInit(int status) {
-                 if (status!=TextToSpeech.ERROR){
-                     mTTS.setLanguage(Locale.JAPANESE);
-                 }
-                 else {
-                     Toast.makeText(QuizActivity.this,"Error",Toast.LENGTH_SHORT).show();
-                 }
-             }
-         });
+        textColorDefaultForRb = rb1.getTextColors();
 
-         listenToWordBtn.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 String listenToWord=textViewWord.getText().toString().trim();
-                 if (listenToWord.equals(textViewWord)){
-                     Toast.makeText(QuizActivity.this,listenToWord,Toast.LENGTH_SHORT).show();
-                     mTTS.speak(listenToWord,TextToSpeech.QUEUE_FLUSH,null);
-                 } else{
-                     Toast.makeText(QuizActivity.this,"Not working",Toast.LENGTH_SHORT).show();
-                 }
-             }
-         });
+        QuizDBHelper jpnDBHelper = new QuizDBHelper(this);
+        theWordList = jpnDBHelper.getAllWords();
+        wordCountTotal = theWordList.size();
 
-        textColorDefaultForRb=rb1.getTextColors();
-
-        QuizDBHelper jpnDBHelper=new QuizDBHelper(this);
-        theWordList=jpnDBHelper.getAllWords();
-        wordCountTotal=theWordList.size();
-        //shuffle - få ord i randow ordning
+        //shuffle - få ord i random ordning
         Collections.shuffle(theWordList);
 
         showNextWord();
+
 
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!answered) {
-                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
+                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()) {
                         checkAnswer();
                     } else {
-                        Toast.makeText(QuizActivity.this,"Try again",Toast.LENGTH_LONG).show();
+                        Toast.makeText(QuizActivity.this, "Try again", Toast.LENGTH_LONG).show();
                     }
                 } else {
                     showNextWord();
@@ -128,15 +120,15 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
-    private void showNextWord(){
+    private void showNextWord() {
         rb1.setTextColor(textColorDefaultForRb);
         rb2.setTextColor(textColorDefaultForRb);
         rb3.setTextColor(textColorDefaultForRb);
         rbGroup.clearCheck();
 
         //if there are any words/sentence/translations left, we can show the next word
-        if (wordCounter<wordCountTotal){
-            currWord=theWordList.get(wordCounter);
+        if (wordCounter < wordCountTotal) {
+            currWord = theWordList.get(wordCounter);
             //currSentence=theWordList.get(wordCounter);
             //currTranslation=theWordList.get(wordCounter);
 
@@ -149,31 +141,32 @@ public class QuizActivity extends AppCompatActivity {
 
             wordCounter++;
             textViewWordCount.setText("Word: " + wordCounter + "/" + wordCountTotal);
-            answered=false;
+            answered = false;
             buttonNext.setText("Check answer");
         } else {
             finishQuiz();
         }
     }
 
-    private void checkAnswer(){
-        answered=true;
+    private void checkAnswer() {
+        answered = true;
 
-        RadioButton rbSel=findViewById(rbGroup.getCheckedRadioButtonId());
-        int answerNr=rbGroup.indexOfChild(rbSel) + 1;
+        RadioButton rbSel = findViewById(rbGroup.getCheckedRadioButtonId());
+        int answerNr = rbGroup.indexOfChild(rbSel) + 1;
 
-        if (answerNr==currWord.getAnswerNr()){
+        if (answerNr == currWord.getAnswerNr()) {
             score++;
             textViewScore.setText("Score: " + score);
         }
         showSolution();
     }
-    private void showSolution(){
+
+    private void showSolution() {
         rb1.setTextColor(Color.WHITE);
         rb2.setTextColor(Color.WHITE);
         rb3.setTextColor(Color.WHITE);
 
-        switch (currWord.getAnswerNr()){
+        switch (currWord.getAnswerNr()) {
             case 1:
                 rb1.setTextColor(Color.BLACK);
                 textViewWord.setText("A is ✔");
@@ -188,26 +181,27 @@ public class QuizActivity extends AppCompatActivity {
                 break;
         }
 
-        if (wordCounter<wordCountTotal){
+        if (wordCounter < wordCountTotal) {
             buttonNext.setText("Next");
         } else {
             buttonNext.setText("Finish!");
         }
     }
-    private void finishQuiz(){
-        Intent resultIntent=new Intent();
+
+    private void finishQuiz() {
+        Intent resultIntent = new Intent();
         resultIntent.putExtra(SHOW_SCORE_AGAIN, score);
-        setResult(RESULT_OK,resultIntent);
+        setResult(RESULT_OK, resultIntent);
         finish();
     }
 
     @Override
     public void onBackPressed() {
-        if (backPressedTime+2000>System.currentTimeMillis()){
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
             finishQuiz();
         } else {
-            Toast.makeText(this,"Press back again to finish", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Press back again to finish", Toast.LENGTH_SHORT);
         }
-        backPressedTime=System.currentTimeMillis();
+        backPressedTime = System.currentTimeMillis();
     }
 }

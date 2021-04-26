@@ -34,7 +34,6 @@ public class ChiQuizFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_chi_quiz, container, false);
 
         //Navigate to ChiQuizActivity (Quiz för kinesiska)
-
         Button gotoChiQuiz = (Button) view.findViewById(R.id.gotoChiQuiz);
         gotoChiQuiz.setOnClickListener(new View.OnClickListener() {
             @Override

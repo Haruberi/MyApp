@@ -62,7 +62,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + JpnWordTable.TABLE_NAME);
         onCreate(db);
     }
-
+//Jpn
     private void fillWordsTable() {
         TheWord w1 = new TheWord("コーヒー", "喫茶店で '' 茶色暖かい飲み物 '' を頼みました。", "At the cafe, I ordered a '' warm brown drink '' ", "A: Coffee", "B: Dog", "C: Water", 1);
         addWord(w1);
