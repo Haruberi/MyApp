@@ -22,20 +22,19 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textWelcome"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textWelcome"
         app:layout_constraintTop_toBottomOf="@+id/textWelcome"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <TextView
         android:id="@+id/textWelcome"
-        android:layout_width="244dp"
-        android:layout_height="48dp"
+        android:layout_width="327dp"
+        android:layout_height="53dp"
         android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal"
         android:text="@string/welcome"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -54,10 +53,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/nameUserText"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="@+id/nameUserText"
         app:layout_constraintTop_toBottomOf="@+id/nameUserText"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <Button
         android:id="@+id/startJpnQuizAgain"
@@ -72,7 +71,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/homeHighscore"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="@+id/homeHighscore"
         app:layout_constraintTop_toBottomOf="@+id/homeHighscore"
         app:layout_constraintVertical_bias="0.0" />
@@ -92,7 +91,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/startJpnQuizAgain"
         app:layout_constraintTop_toBottomOf="@+id/startJpnQuizAgain"
-        app:layout_constraintVertical_bias="0.079" />
+        app:layout_constraintVertical_bias="0.128" />
 
     <Button
         android:id="@+id/startKorQuizAgain"
@@ -106,10 +105,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/startChiQuizAgain"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/startChiQuizAgain"
         app:layout_constraintTop_toBottomOf="@+id/startChiQuizAgain"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.217" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

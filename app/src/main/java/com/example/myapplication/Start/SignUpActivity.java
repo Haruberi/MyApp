@@ -26,7 +26,6 @@ public class SignUpActivity extends AppCompatActivity {
         signUpEmail = (EditText) findViewById(R.id.signUpPageEmail);
         signUpUser = (EditText) findViewById(R.id.signUpPageUser);
         signUpPass = (EditText) findViewById(R.id.signUpPagePass);
-
         languageDB = new LanguageDB(this);
 
         TextView alrReg = findViewById(R.id.alreadyRegistered);

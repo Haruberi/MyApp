@@ -99,7 +99,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(JpnWordTable.COLUMN_WORD, theWord.getTheWord());
         cv.put(JpnWordTable.COLUMN_SENTENCE, theWord.getWordSentence());
-        cv.put(JpnWordTable.COLUMN_SENTENCE, theWord.getSentenceTranslation());
+        cv.put(JpnWordTable.COLUMN_SENTENCE_TRANSLATION, theWord.getSentenceTranslation());
         cv.put(JpnWordTable.COLUMN_OPTION_1, theWord.getOption1());
         cv.put(JpnWordTable.COLUMN_OPTION_2, theWord.getOption2());
         cv.put(JpnWordTable.COLUMN_OPTION_3, theWord.getOption3());

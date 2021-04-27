@@ -52,6 +52,7 @@ public class SignInActivity extends AppCompatActivity {
         Cursor c = SignInActivity.languageDB.userLoginCheck(username);
         c.moveToFirst();
 
+
         if (c == null) {
             Toast.makeText(SignInActivity.this, "Invalid credentials for " + username, Toast.LENGTH_LONG).show();
             signInUser.setText("");

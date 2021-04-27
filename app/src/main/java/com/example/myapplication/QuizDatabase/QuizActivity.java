@@ -30,11 +30,11 @@ public class QuizActivity extends AppCompatActivity {
     public static final String SHOW_SCORE_AGAIN = "showScoreAgain";
 
     private TextView textViewWord;
-    Button listenBtn;
-    TextToSpeech textToSpeech;
+    //Button listenBtn;
+    //TextToSpeech textToSpeech;
 
     private TextView textViewSentence;
-    //private TextView textViewTranslation;
+    private TextView textViewTranslation;
 
     private TextView textViewScore;
     private TextView textViewWordCount;
@@ -63,27 +63,28 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         //tts
-        listenBtn=findViewById(R.id.listenId);
-        textToSpeech=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                if (status!=TextToSpeech.ERROR){
-                    textToSpeech.setLanguage(Locale.UK); //japanese
-                }
-            }
-        });
-
-        listenBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textToSpeech.speak(textViewWord.getText().toString(),TextToSpeech.QUEUE_FLUSH,null);
-            }
-        });
+        //
+        //listenBtn=findViewById(R.id.listenId);
+        //        textToSpeech=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+        //            @Override
+        //            public void onInit(int status) {
+        //                if (status!=TextToSpeech.ERROR){
+        //                    textToSpeech.setLanguage(Locale.UK); //japanese
+        //                }
+        //            }
+        //        });
+        //
+        //        listenBtn.setOnClickListener(new View.OnClickListener() {
+        //            @Override
+        //            public void onClick(View v) {
+        //                textToSpeech.speak(textViewWord.getText().toString(),TextToSpeech.QUEUE_FLUSH,null);
+        //            }
+        //        });
 
         //*****jpn quiz******
         textViewWord = findViewById(R.id.wordId);
         textViewSentence = findViewById(R.id.wordSentence);
-        //textViewTranslation=findViewById(R.id.translationSentence);
+        textViewTranslation=findViewById(R.id.translationSentence);
         textViewScore = findViewById(R.id.scoreId);
         textViewWordCount = findViewById(R.id.wordCountId);
         rbGroup = findViewById(R.id.radioGroupId);
