@@ -84,7 +84,7 @@ public class QuizActivity extends AppCompatActivity {
         //*****jpn quiz******
         textViewWord = findViewById(R.id.wordId);
         textViewSentence = findViewById(R.id.wordSentence);
-        textViewTranslation=findViewById(R.id.translationSentence);
+        //textViewTranslation=findViewById(R.id.translationSentence);
         textViewScore = findViewById(R.id.scoreId);
         textViewWordCount = findViewById(R.id.wordCountId);
         rbGroup = findViewById(R.id.radioGroupId);

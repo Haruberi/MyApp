@@ -99,7 +99,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
         ContentValues cv = new ContentValues();
         cv.put(JpnWordTable.COLUMN_WORD, theWord.getTheWord());
         cv.put(JpnWordTable.COLUMN_SENTENCE, theWord.getWordSentence());
-        cv.put(JpnWordTable.COLUMN_SENTENCE_TRANSLATION, theWord.getSentenceTranslation());
+        cv.put(JpnWordTable.COLUMN_SENTENCE, theWord.getSentenceTranslation());
         cv.put(JpnWordTable.COLUMN_OPTION_1, theWord.getOption1());
         cv.put(JpnWordTable.COLUMN_OPTION_2, theWord.getOption2());
         cv.put(JpnWordTable.COLUMN_OPTION_3, theWord.getOption3());
@@ -119,7 +119,6 @@ public class QuizDBHelper extends SQLiteOpenHelper {
                 theWord.setTheWord(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_WORD)));
                 theWord.setWordSentence(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_SENTENCE)));
                 theWord.setSentenceTranslation(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_SENTENCE_TRANSLATION)));
-
                 theWord.setOption1(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_OPTION_1)));
                 theWord.setOption2(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_OPTION_2)));
                 theWord.setOption3(c.getString(c.getColumnIndex(JpnWordTable.COLUMN_OPTION_3)));

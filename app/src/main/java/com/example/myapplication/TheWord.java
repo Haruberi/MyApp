@@ -33,12 +33,13 @@ public class TheWord {
     //wordSentence
 
     public String getWordSentence() {
-        return wordSentence;
-    }
+            return wordSentence;
+        }
 
-    public void setWordSentence(String wordSentence) {
-        this.wordSentence = wordSentence;
-    }
+        public void setWordSentence(String wordSentence) {
+            this.wordSentence = wordSentence;
+       }
+
 
     //sentence translation
 
