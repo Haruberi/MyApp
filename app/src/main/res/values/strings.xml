@@ -137,12 +137,11 @@
 
     <!--Account Bottom-->
     <string name="accountTitle">Home</string>
-    <!--Mail Bottom-->
-    <string name="backTitle">Go back</string>
-    <!--Subscribe Bottom-->
-    <string name="forwardTitle">Go forward</string>
     <!--Sign out Bottom-->
-    <string name="signOutTitle">Sign out</string>
+    <string name="signOutTitle">Sign out Page</string>
+    <string name="rlySignOut">Do you really want to sign out ?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 
     <!--Forgot password fragment-->
     <string name="forgotPassPageText">Forgot your password ?</string>
