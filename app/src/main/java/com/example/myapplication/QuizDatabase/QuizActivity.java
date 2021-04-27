@@ -68,7 +68,7 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onInit(int status) {
                 if (status!=TextToSpeech.ERROR){
-                    textToSpeech.setLanguage(Locale.JAPANESE); //japanese
+                    textToSpeech.setLanguage(Locale.UK); //japanese
                 }
             }
         });

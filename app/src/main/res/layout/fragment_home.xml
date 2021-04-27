@@ -8,11 +8,12 @@
     android:background="@color/background_purple"
     tools:context=".Home.HomeFragment">
 
+
     <TextView
         android:id="@+id/nameUserText"
         android:layout_width="253dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="516dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/nameText"
@@ -21,10 +22,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textWelcome"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/textWelcome"
         app:layout_constraintTop_toBottomOf="@+id/textWelcome"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.077" />
 
     <TextView
         android:id="@+id/textWelcome"
@@ -40,8 +41,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
-
+        app:layout_constraintVertical_bias="0.079" />
 
     <TextView
         android:id="@+id/homeHighscore"
