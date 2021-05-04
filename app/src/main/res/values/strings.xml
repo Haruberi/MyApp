@@ -1,8 +1,8 @@
 <resources>
     <string name="loremText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
-    <string name="jpnQuizText">Welcome to the quiz to learn Japanese❗ In each round of the quiz there will be a total of 5 questions. When the quiz is finished you will see your score right over here You can do the test as many times as you want!! 頑張ってください(Ganbattekudasai) = Good luck! 😁 🍣</string>
-    <string name="chiQuizText">Welcome to the quiz to learn Chinese❗ In each round of the quiz there will be a total of 5 words. When the quiz is finished you will see your score right over here! You can do the test as many times you want!! 加油 (Jiā yóu) = Good luck! 😁 🍜 </string>
-    <string name="korQuizText">Welcome to the quiz to learn Korean❗ In each round of the quiz there will be a total of 5 words. When the quiz is finished you will see your score right over here! You can do the test as many times you want!! 잘보세요 (Jal boseyo) = Good luck! 😁 🍚 </string>
+    <string name="jpnQuizText">Welcome to the quiz to learn Japanese❗ In each round of the quiz there will be a total of 10 questions. When the quiz is finished you will see your score right over here You can do the test as many times as you want!! 頑張ってください(Ganbattekudasai) = Good luck! 😁 🍣</string>
+    <string name="chiQuizText">Welcome to the quiz to learn Chinese❗ In each round of the quiz there will be a total of 10 words. When the quiz is finished you will see your score right over here! You can do the test as many times you want!! 加油 (Jiā yóu) = Good luck! 😁 🍜 </string>
+    <string name="korQuizText">Welcome to the quiz to learn Korean❗ In each round of the quiz there will be a total of 10 words. When the quiz is finished you will see your score right over here! You can do the test as many times you want!! 잘보세요 (Jal boseyo) = Good luck! 😁 🍗 </string>
 
 
     <string name="app_name">Language app</string>

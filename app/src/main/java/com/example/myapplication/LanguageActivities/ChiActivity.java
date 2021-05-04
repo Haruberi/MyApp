@@ -27,7 +27,7 @@ public class ChiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chi);
 
-        chiBottom=findViewById(R.id.chiBottom_nav);
+        //chiBottom=findViewById(R.id.chiBottom_nav);
 
         chiView=findViewById(R.id.chiViewPager);
         chiLayout=findViewById(R.id.chiTabLayout);

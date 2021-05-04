@@ -26,16 +26,15 @@ public class TheWord {
     public String getTheWord() {
         return theWord;
     }
-
     public void setTheWord(String theWord) {
         this.theWord = theWord;
     }
+
     //wordSentence
 
     public String getWordSentence() {
             return wordSentence;
         }
-
         public void setWordSentence(String wordSentence) {
             this.wordSentence = wordSentence;
        }

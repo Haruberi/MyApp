@@ -37,14 +37,14 @@ public class LanguageDB extends SQLiteOpenHelper {
             String qry = "insert into LanguageUserTab values('" + name + "', '" + email + "','" + username + "', '" + password + "')";
             SQLiteDatabase db = getWritableDatabase();
             db.execSQL(qry);
-            Toast.makeText(c, "Glad you joined, " + name + " ❕❕🤩 ", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, "Glad you joined, " + name + " ❕❕", Toast.LENGTH_LONG).show();
             return true;
         } catch (Exception e) {
             Log.e("LanguageDB", "Insertion of record failed", e);
             return false;
         }
     }
-//Login check
+
     public Cursor userLoginCheck(String username){
         try{
             String qry="Select Name, Password from LanguageUserTab where Username='"+username+"'";

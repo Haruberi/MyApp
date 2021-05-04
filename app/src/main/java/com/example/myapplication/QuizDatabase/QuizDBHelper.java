@@ -37,6 +37,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     }
 
     //Create the database
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         this.db = db;
@@ -60,6 +61,7 @@ public class QuizDBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + JpnWordTable.TABLE_NAME);
+        // db
         onCreate(db);
     }
 //Jpn

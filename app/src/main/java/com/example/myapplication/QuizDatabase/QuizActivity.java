@@ -56,6 +56,7 @@ public class QuizActivity extends AppCompatActivity {
     private boolean answered;
 
     private long backPressedTime;
+
     private List<TheWord> theWordList;
 
     protected void onCreate(Bundle savedInstanceState) {

@@ -60,13 +60,13 @@ public class JpnQuizActivity extends AppCompatActivity {
     private void loadJpnHighscore(){
         SharedPreferences prefs=getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         jpnHighscore=prefs.getInt(KEY_HIGHSCORE,0);
-        jpnTextViewHighscore.setText("Your highscore: " + jpnHighscore);
+        jpnTextViewHighscore.setText("Your current score: " + jpnHighscore);
 
     }
 
     private void updateHighscore(int newJpnHighscore) {
         jpnHighscore=newJpnHighscore;
-        jpnTextViewHighscore.setText("Your highscore: " + jpnHighscore);
+        jpnTextViewHighscore.setText("Your current score: " + jpnHighscore);
 
         SharedPreferences prefs=getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor=prefs.edit();

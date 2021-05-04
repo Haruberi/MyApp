@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/faqBtn"
+        android:id="@+id/nav_faq"
         android:enabled="true"
         android:icon="@drawable/faq_bottom_icon"
         android:title="@string/faqTabText"/>
 
     <item
-        android:id="@+id/accountBtn"
+        android:id="@+id/nav_home"
         android:enabled="true"
         android:icon="@drawable/account_bottom_icon"
         android:title="@string/accountTitle"/>
 
     <item
-        android:id="@+id/signOutBtn"
+        android:id="@+id/nav_signOut"
         android:enabled="true"
         android:icon="@drawable/signout_bottom_icon"
         android:title="@string/signOutTitle"/>
