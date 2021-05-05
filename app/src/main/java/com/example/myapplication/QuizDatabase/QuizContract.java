@@ -19,16 +19,6 @@ public final class QuizContract implements BaseColumns {
         public static final String COLUMN_OPTION_2="option_2";
         public static final String COLUMN_OPTION_3="option_3";
         public static final String COLUMN_ANSWER_NR="answer_nr";
-        //chi
-        public static final String TABLE_NAME_CHI="chi_word_table";
-        public static final String CHI_WORD="chi_word";
-        public static final String CHI_SENTENCE="chi_sentence";
-        public static final String CHI_SENTENCE_TRANSLATION="chi_sentence_translation";
-
-        public static final String CHI_OPTION_1="chi_option_1";
-        public static final String CHI_OPTION_2="chi_option_2";
-        public static final String CHI_OPTION_3="chi_option_3";
-        public static final String CHI_ANSWER_NR="chi_answer_nr";
 
     }
 

@@ -31,7 +31,6 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Nullable
@@ -44,7 +43,17 @@ public class HomeFragment extends Fragment {
           //      container,
             //    false);
         View view=inflater.inflate(R.layout.fragment_home,container,false);
+        //add text to get name
+        /*nameText=(TextView) view.findViewById(R.id.nameUserText);
+        Bundle bun = getActivity().getIntent().getExtras();
+        String username=bun.getString("username");
+        nameText.setText(username);*/
 
+        /*nameText=(TextView)findViewById(R.id.nameUserText);
+        Bundle bun=getIntent().getExtras();
+
+        String username=bun.getString("username");
+        nameText.setText(username);*/
 
         //Navigate to KorQuizActivity via Button
         Button goToKorQuizAgain=(Button) view.findViewById(R.id.startKorQuizAgain);

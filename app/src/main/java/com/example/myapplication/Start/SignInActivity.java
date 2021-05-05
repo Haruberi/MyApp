@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.Home.HomeActivity;
+import com.example.myapplication.Home.HomeFragment;
 import com.example.myapplication.LanguageDB;
 import com.example.myapplication.R;
 
@@ -59,6 +60,7 @@ public class SignInActivity extends AppCompatActivity {
             String password = c.getString(1);
 
             if (pass.equals(password)) {
+                //change from HomeActivity to fragment to try for name
                 Intent i = new Intent(SignInActivity.this, HomeActivity.class);
                 i.putExtra("username", userN);
                 startActivity(i);

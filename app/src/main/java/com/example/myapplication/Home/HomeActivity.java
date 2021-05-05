@@ -18,7 +18,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity {
 
-    //private TextView nameText;
+    private TextView nameText;
     private ViewPager viewPager;
     private TabLayout tbLayout;
 
@@ -34,11 +34,11 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
 
-        /*nameText=(TextView)findViewById(R.id.nameUserText);
+        nameText=(TextView)findViewById(R.id.nameUserText);
         Bundle bun=getIntent().getExtras();
 
         String username=bun.getString("username");
-        nameText.setText(username);*/
+        nameText.setText(username);
 
         //botNav = findViewById(R.id.bottom_navigation);
         //botNav.setOnNavigationItemSelectedListener(navListener);
