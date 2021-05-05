@@ -19,17 +19,17 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <!--<TextView
         android:id="@+id/nameUserText"
-        android:layout_width="253dp"
-        android:layout_height="46dp"
-        android:fontFamily="casual"
+        android:layout_width="422dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/diplomata"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/nameText"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/welcomeText"
@@ -93,6 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
         app:layout_editor_absoluteX="178dp"
         app:layout_editor_absoluteY="354dp">
+
     </androidx.viewpager.widget.ViewPager>
 
 

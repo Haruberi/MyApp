@@ -2,6 +2,7 @@ package com.example.myapplication.Home;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity {
 
+    //private TextView nameText;
     private ViewPager viewPager;
     private TabLayout tbLayout;
 
@@ -31,6 +33,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_layout);
+
+        /*nameText=(TextView)findViewById(R.id.nameUserText);
+        Bundle bun=getIntent().getExtras();
+
+        String username=bun.getString("username");
+        nameText.setText(username);*/
 
         //botNav = findViewById(R.id.bottom_navigation);
         //botNav.setOnNavigationItemSelectedListener(navListener);

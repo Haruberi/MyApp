@@ -44,7 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
         boolean result=SignUpActivity.languageDB.insertData(name, email, username, password);
 
         if (result) {
-            Toast.makeText(SignUpActivity.this,"Sign in to continue!",Toast.LENGTH_LONG).show();
+            Toast.makeText(SignUpActivity.this, username + " Sign in to continue!",Toast.LENGTH_LONG).show();
             signUpName.setText("");
             signUpEmail.setText("");
             signUpUser.setText("");

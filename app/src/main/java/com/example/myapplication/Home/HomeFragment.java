@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.myapplication.QuizActivities.ChiQuizActivity;
 import com.example.myapplication.QuizActivities.JpnQuizActivity;
@@ -23,11 +24,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeFragment extends Fragment {
 
+    private TextView nameText;
+
     public HomeFragment(){}
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Nullable
@@ -40,6 +44,7 @@ public class HomeFragment extends Fragment {
           //      container,
             //    false);
         View view=inflater.inflate(R.layout.fragment_home,container,false);
+
 
         //Navigate to KorQuizActivity via Button
         Button goToKorQuizAgain=(Button) view.findViewById(R.id.startKorQuizAgain);

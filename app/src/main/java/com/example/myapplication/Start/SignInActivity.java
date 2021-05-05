@@ -52,26 +52,44 @@ public class SignInActivity extends AppCompatActivity {
         Cursor c = SignInActivity.languageDB.userLoginCheck(username);
         c.moveToFirst();
 
-
         if (c == null) {
             Toast.makeText(SignInActivity.this, "Invalid credentials for " + username, Toast.LENGTH_LONG).show();
-            signInUser.setText("");
-            signInPass.setText("");
-        }
-        else {
-            String name = c.getString(0);
+        } else {
+            String userN = c.getString(0);
             String password = c.getString(1);
 
             if (pass.equals(password)) {
                 Intent i = new Intent(SignInActivity.this, HomeActivity.class);
-                i.putExtra("name", name);
+                i.putExtra("username", userN);
                 startActivity(i);
             }
             else {
                 Toast.makeText(SignInActivity.this, "Invalid credentials for user " + username, Toast.LENGTH_LONG).show();
             }
-            signInUser.setText("");
-            signInPass.setText("");
         }
+        signInUser.setText("");
+        signInPass.setText("");
     }
 }
+
+//        if (c == null) {
+//            Toast.makeText(SignInActivity.this, "Invalid credentials for " + username, Toast.LENGTH_LONG).show();
+//            signInUser.setText("");
+//            signInPass.setText("");
+//        } else {
+//            String name = c.getString(0);
+//            String password = c.getString(1);
+//
+//            if (pass.equals(password)) {
+//                Intent i = new Intent(SignInActivity.this, HomeActivity.class);
+//                i.putExtra("name", name);
+//                startActivity(i);
+//            }
+//            else {
+//                Toast.makeText(SignInActivity.this, "Invalid credentials for user " + username, Toast.LENGTH_LONG).show();
+//            }
+//            signInUser.setText("");
+//            signInPass.setText("");
+//        }
+//    }
+//}
