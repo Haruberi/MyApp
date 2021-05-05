@@ -62,30 +62,8 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
-        //tts
-        //
-        //listenBtn=findViewById(R.id.listenId);
-        //        textToSpeech=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-        //            @Override
-        //            public void onInit(int status) {
-        //                if (status!=TextToSpeech.ERROR){
-        //                    textToSpeech.setLanguage(Locale.UK); //japanese
-        //                }
-        //            }
-        //        });
-        //
-        //        listenBtn.setOnClickListener(new View.OnClickListener() {
-        //            @Override
-        //            public void onClick(View v) {
-        //                textToSpeech.speak(textViewWord.getText().toString(),TextToSpeech.QUEUE_FLUSH,null);
-        //            }
-        //        });
-
-        //*****jpn quiz******
         textViewWord = findViewById(R.id.wordId);
         textViewSentence = findViewById(R.id.wordSentence);
-        //textViewTranslation=findViewById(R.id.translationSentence);
         textViewScore = findViewById(R.id.scoreId);
         textViewWordCount = findViewById(R.id.wordCountId);
         rbGroup = findViewById(R.id.radioGroupId);
@@ -100,7 +78,6 @@ public class QuizActivity extends AppCompatActivity {
         theWordList = jpnDBHelper.getAllWords();
         wordCountTotal = theWordList.size();
 
-        //shuffle - få ord i random ordning
         Collections.shuffle(theWordList);
 
         showNextWord();
@@ -128,15 +105,11 @@ public class QuizActivity extends AppCompatActivity {
         rb3.setTextColor(textColorDefaultForRb);
         rbGroup.clearCheck();
 
-        //if there are any words/sentence/translations left, we can show the next word
         if (wordCounter < wordCountTotal) {
             currWord = theWordList.get(wordCounter);
-            //currSentence=theWordList.get(wordCounter);
-            //currTranslation=theWordList.get(wordCounter);
 
             textViewWord.setText(currWord.getTheWord());
             textViewSentence.setText(currWord.getWordSentence());
-            //textViewTranslation.setText(currWord.getSentenceTranslation());
             rb1.setText(currWord.getOption1());
             rb2.setText(currWord.getOption2());
             rb3.setText(currWord.getOption3());
