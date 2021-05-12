@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 public class TheWord {
     private String theWord;
-    private String wordSentence;
     private String sentenceTranslation;
 
     private String option1;
