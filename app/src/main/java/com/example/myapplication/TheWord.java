@@ -1,14 +1,15 @@
 package com.example.myapplication;
 
 public class TheWord {
+    //fields
     private String theWord;
     private String sentenceTranslation;
-
     private String option1;
     private String option2;
     private String option3;
     private int answerNr;
 
+//constructors
     public TheWord(){}
 
     public TheWord(String theWord, String sentenceTranslation, String option1, String option2, String option3, int answerNr) {

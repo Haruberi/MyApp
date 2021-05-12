@@ -1,21 +1,25 @@
 package com.example.myapplication.QuizDatabase;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+import android.speech.tts.TextToSpeech;
+import android.speech.tts.TextToSpeech.OnInitListener;
 import android.content.Intent;
+import android.widget.Toast;
 import android.content.res.ColorStateList;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.os.Bundle;
+
 import android.speech.tts.TextToSpeech;
-import android.view.View;
+
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.TheWord;
@@ -25,13 +29,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
-public class QuizActivity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity{
 
     public static final String SHOW_SCORE_AGAIN = "showScoreAgain";
 
+
     private TextView textViewWord;
-    //Button listenBtn;
-    //TextToSpeech textToSpeech;
 
     private TextView textViewSentence;
     private TextView textViewTranslation;
@@ -82,10 +85,9 @@ public class QuizActivity extends AppCompatActivity {
 
         showNextWord();
 
-
         buttonNext.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
+
                 if (!answered) {
                     if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()) {
                         checkAnswer();
@@ -98,6 +100,7 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void showNextWord() {
         rb1.setTextColor(textColorDefaultForRb);

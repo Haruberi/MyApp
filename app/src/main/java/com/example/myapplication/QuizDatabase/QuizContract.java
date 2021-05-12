@@ -12,7 +12,6 @@ public final class QuizContract implements BaseColumns {
         public static final String _ID = "_id";
         public static final String TABLE_NAME="jpn_word_table";
         public static final String COLUMN_WORD="jpn_word";
-        public static final String COLUMN_SENTENCE="jpn_sentence";
         public static final String COLUMN_SENTENCE_TRANSLATION="jpn_sentence_translation";
 
         public static final String COLUMN_OPTION_1="option_1";
