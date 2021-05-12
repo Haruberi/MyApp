@@ -63,7 +63,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         textViewWord = findViewById(R.id.wordId);
-        textViewSentence = findViewById(R.id.wordSentence);
+        textViewSentence = findViewById(R.id.englishSentence);
         textViewScore = findViewById(R.id.scoreId);
         textViewWordCount = findViewById(R.id.wordCountId);
         rbGroup = findViewById(R.id.radioGroupId);
@@ -109,7 +109,7 @@ public class QuizActivity extends AppCompatActivity {
             currWord = theWordList.get(wordCounter);
 
             textViewWord.setText(currWord.getTheWord());
-            textViewSentence.setText(currWord.getWordSentence());
+            textViewSentence.setText(currWord.getSentenceTranslation());
             rb1.setText(currWord.getOption1());
             rb2.setText(currWord.getOption2());
             rb3.setText(currWord.getOption3());
@@ -144,15 +144,15 @@ public class QuizActivity extends AppCompatActivity {
         switch (currWord.getAnswerNr()) {
             case 1:
                 rb1.setTextColor(Color.BLACK);
-                textViewWord.setText("A is ✔");
+                textViewWord.setText("A is correct");
                 break;
             case 2:
                 rb2.setTextColor(Color.BLACK);
-                textViewWord.setText("B is ✔");
+                textViewWord.setText("B is correct");
                 break;
             case 3:
                 rb3.setTextColor(Color.BLACK);
-                textViewWord.setText("C i ✔");
+                textViewWord.setText("C i correct");
                 break;
         }
 

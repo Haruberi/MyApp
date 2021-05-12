@@ -12,9 +12,8 @@ public class TheWord {
 
     public TheWord(){}
 
-    public TheWord(String theWord, String wordSentence, String sentenceTranslation, String option1, String option2, String option3, int answerNr) {
+    public TheWord(String theWord, String sentenceTranslation, String option1, String option2, String option3, int answerNr) {
         this.theWord = theWord;
-        this.wordSentence = wordSentence;
         this.sentenceTranslation = sentenceTranslation;
         this.option1 = option1;
         this.option2 = option2;
@@ -29,16 +28,6 @@ public class TheWord {
     public void setTheWord(String theWord) {
         this.theWord = theWord;
     }
-
-    //wordSentence
-
-    public String getWordSentence() {
-            return wordSentence;
-        }
-        public void setWordSentence(String wordSentence) {
-            this.wordSentence = wordSentence;
-       }
-
 
     //sentence translation
 

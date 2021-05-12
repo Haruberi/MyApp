@@ -95,7 +95,7 @@
         app:layout_constraintVertical_bias="0.486" />
 
     <TextView
-        android:id="@+id/wordSentence"
+        android:id="@+id/englishSentence"
         android:layout_width="404dp"
         android:layout_height="157dp"
         android:text="@string/wordSentence"
