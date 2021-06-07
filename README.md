@@ -1,2 +1,2 @@
 # MyApp
-LanguageApp Android Studio
+Mobile application created in Android Studio (Java)
