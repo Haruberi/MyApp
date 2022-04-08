@@ -20,10 +20,10 @@ git clone https://github.com/Haruberi/MyApp.git
 
 Download Visual Studio
 
-[![as](https://img.shields.io/badge/--3DDC84?logo=androidstudio&logoColor=000)](https://developer.android.com/studio?gclid=CjwKCAjwopWSBhB6EiwAjxmqDVN6Kc2NzL4YOuA2mqhIdQrZLnRTlmGG1cm8nzIkTRKbUeXLBmrGfBoCdfcQAvD_BwE&gclsrc=aw.ds)
-[![java](https://img.shields.io/badge/--007396?logo=java&logoColor=000)](https://www.java.com/en/)
-[![gradle](https://img.shields.io/badge/--02303A?logo=gradle&logoColor=000)](https://developer.android.com/studio/build)
-[![windows](https://img.shields.io/badge/--0078D6?logo=windows&logoColor=000)](https://www.microsoft.com/sv-se/windows)
+[![as](https://img.shields.io/badge/-Android%20Studio-3DDC84?logo=androidstudio&logoColor=000)](https://developer.android.com/studio?gclid=CjwKCAjwopWSBhB6EiwAjxmqDVN6Kc2NzL4YOuA2mqhIdQrZLnRTlmGG1cm8nzIkTRKbUeXLBmrGfBoCdfcQAvD_BwE&gclsrc=aw.ds)
+[![java](https://img.shields.io/badge/-Java-007396?logo=java&logoColor=000)](https://www.java.com/en/)
+[![gradle](https://img.shields.io/badge/-Gradle-02303A?logo=gradle&logoColor=000)](https://developer.android.com/studio/build)
+[![windows](https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=000)](https://www.microsoft.com/sv-se/windows)
 
 ## Maintainers
 
